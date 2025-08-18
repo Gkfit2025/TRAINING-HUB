@@ -174,17 +174,61 @@ export default function NoradrenalineTraining() {
     return (
       <div className="min-h-screen bg-gradient-to-br from-purple-50 to-indigo-100">
         <Header moduleType="noradrenaline" />
-        <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <Breadcrumb items={[{ label: "Noradrenaline Training" }, { label: "Overview" }]} />
-          <div className="text-center mb-8">
-            <div className="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-              <div className="w-8 h-8 bg-purple-600 rounded"></div>
-            </div>
-            <h1 className="text-4xl font-bold text-gray-900 mb-2">Noradrenaline Training</h1>
-            <p className="text-xl text-gray-600">Hospital Staff Education Program</p>
-          </div>
 
-          <Card className="max-w-3xl mx-auto mb-8 bg-gradient-to-r from-teal-50 to-cyan-50 border-teal-200">
+        {/* Hero Image Section */}
+        <div className="relative h-80 bg-gradient-to-r from-purple-800 to-indigo-900 overflow-hidden">
+          <img
+            src="/iv-medication-setup.png"
+            alt="IV medication setup and central venous catheter"
+            className="w-full h-full object-cover opacity-70"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-purple-900/60 to-transparent" />
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="text-center text-white">
+              <h1 className="text-5xl font-bold mb-4">Noradrenaline Training</h1>
+              <p className="text-xl">Critical Medication Administration</p>
+            </div>
+          </div>
+        </div>
+
+        <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 -mt-16 relative z-10">
+          <Breadcrumb items={[{ label: "Noradrenaline Training" }, { label: "Overview" }]} />
+
+          {/* Medication Image Card */}
+          <Card className="mb-8 bg-white/95 backdrop-blur-sm">
+            <CardContent className="p-6">
+              <div className="grid md:grid-cols-2 gap-6 items-center">
+                <div className="relative">
+                  <img
+                    src="/noradrenaline-vial.png"
+                    alt="Noradrenaline medication vial and preparation"
+                    className="w-full h-64 object-cover rounded-lg shadow-lg"
+                  />
+                </div>
+                <div>
+                  <h2 className="text-2xl font-bold text-gray-900 mb-4">Critical Vasopressor Training</h2>
+                  <p className="text-gray-600 mb-4">
+                    Master the safe administration of noradrenaline, including proper dosing calculations,
+                    administration routes, and critical safety protocols for this life-saving medication.
+                  </p>
+                  <div className="bg-red-50 border border-red-200 rounded-lg p-4">
+                    <div className="flex items-start space-x-3">
+                      <AlertTriangle className="h-5 w-5 text-red-600 mt-0.5 flex-shrink-0" />
+                      <div>
+                        <h4 className="font-semibold text-red-900 mb-1">Critical Safety Alert</h4>
+                        <p className="text-red-800 text-sm">
+                          Noradrenaline must be administered via central venous access. Extravasation can cause severe
+                          tissue necrosis.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card className="max-w-3xl mx-auto bg-gradient-to-r from-teal-50 to-cyan-50 border-teal-200">
             <CardHeader className="text-center">
               <div className="flex items-center justify-center mb-4">
                 <Clock className="h-8 w-8 text-teal-600" />
@@ -219,19 +263,6 @@ export default function NoradrenalineTraining() {
                   <Badge className="bg-purple-100 text-purple-800 justify-center py-2">Safety Protocols</Badge>
                   <Badge className="bg-purple-100 text-purple-800 justify-center py-2">Maximum Doses</Badge>
                   <Badge className="bg-purple-100 text-purple-800 justify-center py-2">Clinical Guidelines</Badge>
-                </div>
-              </div>
-
-              <div className="bg-orange-50 border border-orange-200 rounded-lg p-4 mb-6">
-                <div className="flex items-start space-x-3">
-                  <AlertTriangle className="h-5 w-5 text-orange-600 mt-0.5 flex-shrink-0" />
-                  <div>
-                    <h4 className="font-semibold text-orange-900 mb-1">Important Notice</h4>
-                    <p className="text-orange-800 text-sm">
-                      This assessment covers critical safety information for Noradrenaline administration. Please review
-                      all questions carefully and consult hospital protocols for clinical practice.
-                    </p>
-                  </div>
                 </div>
               </div>
 

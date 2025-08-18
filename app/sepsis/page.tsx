@@ -206,13 +206,18 @@ export default function SepsisTraining() {
             className="w-full h-full object-cover opacity-80"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent" />
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="text-center text-white">
+              <h1 className="text-5xl font-bold mb-4">Sepsis Guidelines 2024</h1>
+              <p className="text-2xl">Life-Saving Protocol Training</p>
+            </div>
+          </div>
         </div>
 
         {/* Main Content */}
         <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           {/* Title Section */}
           <div className="text-center mb-8 -mt-32 relative z-10">
-            <h1 className="text-5xl font-bold text-white mb-4">Sepsis Guidelines 2024</h1>
             <h2 className="text-2xl font-semibold text-red-600 mb-2">Comprehensive MCQ Assessment</h2>
             <p className="text-lg text-gray-700 max-w-3xl mx-auto">
               Test your knowledge of the latest sepsis management protocols based on Surviving Sepsis Campaign (SSC),

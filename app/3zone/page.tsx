@@ -66,10 +66,15 @@ const questions = [
 ]
 
 export default function ThreeZoneTraining() {
+  const [showOverview, setShowOverview] = useState(true)
   const [currentQuestion, setCurrentQuestion] = useState(0)
   const [selectedAnswers, setSelectedAnswers] = useState<number[]>([])
   const [showResults, setShowResults] = useState(false)
   const { updateProgress } = useProgress()
+
+  const handleStartAssessment = () => {
+    setShowOverview(false)
+  }
 
   const handleAnswerSelect = (answerIndex: number) => {
     const newAnswers = [...selectedAnswers]
@@ -163,6 +168,102 @@ export default function ThreeZoneTraining() {
                     Retake Assessment
                   </Button>
                 )}
+              </div>
+            </CardContent>
+          </Card>
+        </main>
+      </div>
+    )
+  }
+
+  if (showOverview) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+        <Header moduleType="3zone" />
+
+        {/* Hero Image Section */}
+        <div className="relative h-80 bg-gradient-to-r from-blue-800 to-indigo-900 overflow-hidden">
+          <img
+            src="/hospital-cleaning-zones.png"
+            alt="Hospital cleaning zones with color-coded equipment"
+            className="w-full h-full object-cover opacity-70"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-900/60 to-transparent" />
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="text-center text-white">
+              <h1 className="text-5xl font-bold mb-4">3Zone Deep Clean Assessment</h1>
+              <p className="text-xl">Hospital Cleaning Protocol Training</p>
+            </div>
+          </div>
+        </div>
+
+        <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 -mt-16 relative z-10">
+          <Breadcrumb items={[{ label: "3Zone Training" }, { label: "Overview" }]} />
+
+          {/* Equipment Image Card */}
+          <Card className="mb-8 bg-white/95 backdrop-blur-sm">
+            <CardContent className="p-6">
+              <div className="grid md:grid-cols-2 gap-6 items-center">
+                <div>
+                  <h2 className="text-2xl font-bold text-gray-900 mb-4">Color-Coded Cleaning System</h2>
+                  <p className="text-gray-600 mb-4">
+                    Learn the essential 3-zone cleaning method that reduces infection risk through systematic,
+                    color-coded equipment management and proper cleaning protocols.
+                  </p>
+                  <div className="space-y-2">
+                    <div className="flex items-center space-x-3">
+                      <div className="w-4 h-4 bg-red-500 rounded"></div>
+                      <span className="text-sm font-medium">High-Risk Zone (Red)</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <div className="w-4 h-4 bg-yellow-500 rounded"></div>
+                      <span className="text-sm font-medium">Medium-Risk Zone (Yellow)</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <div className="w-4 h-4 bg-green-500 rounded"></div>
+                      <span className="text-sm font-medium">Low-Risk Zone (Green)</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="relative">
+                  <img
+                    src="/medical-equipment-cleaning.png"
+                    alt="Medical equipment cleaning with color-coded supplies"
+                    className="w-full h-64 object-cover rounded-lg shadow-lg"
+                  />
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Assessment Overview */}
+          <Card className="max-w-3xl mx-auto bg-gradient-to-r from-blue-50 to-cyan-50 border-blue-200">
+            <CardHeader className="text-center">
+              <CardTitle className="text-2xl text-gray-900">Assessment Overview</CardTitle>
+              <p className="text-gray-600 mt-2">
+                Test your knowledge on the 3-zone cleaning method and infection control protocols
+              </p>
+            </CardHeader>
+            <CardContent>
+              <div className="grid grid-cols-3 gap-6 mb-6">
+                <div className="text-center p-4 bg-white rounded-lg border border-blue-100">
+                  <div className="text-3xl font-bold text-gray-900 mb-1">5</div>
+                  <div className="text-sm text-gray-600">Questions</div>
+                </div>
+                <div className="text-center p-4 bg-white rounded-lg border border-blue-100">
+                  <div className="text-3xl font-bold text-gray-900 mb-1">80%</div>
+                  <div className="text-sm text-gray-600">Passing Score</div>
+                </div>
+                <div className="text-center p-4 bg-white rounded-lg border border-blue-100">
+                  <div className="text-3xl font-bold text-gray-900 mb-1">~10</div>
+                  <div className="text-sm text-gray-600">Minutes</div>
+                </div>
+              </div>
+
+              <div className="text-center">
+                <Button onClick={handleStartAssessment} className="bg-blue-600 hover:bg-blue-700 px-8 py-3 text-lg">
+                  Start Assessment
+                </Button>
               </div>
             </CardContent>
           </Card>
