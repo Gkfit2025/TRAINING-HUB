@@ -283,7 +283,7 @@ export default function NoradrenalineTraining() {
           </CardHeader>
           <CardContent>
             <RadioGroup
-              value={selectedAnswers[currentQuestion]?.toString()}
+              value={selectedAnswers[currentQuestion] !== undefined ? selectedAnswers[currentQuestion].toString() : ""}
               onValueChange={(value) => handleAnswerSelect(Number.parseInt(value))}
               className="space-y-4"
             >
