@@ -7,49 +7,12 @@ import { Progress } from "@/components/ui/progress"
 import { Award, ChevronRight, CheckCircle, Trophy, Target } from "lucide-react"
 import Link from "next/link"
 import { useProgress } from "@/lib/progress-context"
-
-const moduleConfig = {
-  "3zone": {
-    title: "3Zone Deep Clean Assessment",
-    description:
-      "Hospital Cleaning Protocol Training - Learn the essential 3-zone cleaning methodology to reduce infection risk and maintain professional standards.",
-    badge: "Fundamentals",
-    badgeClass: "bg-blue-100 text-blue-800",
-    buttonClass: "bg-blue-600 hover:bg-blue-700",
-    topics: ["Infection Control", "Safety Protocols", "Best Practices"],
-    questions: 5,
-    estimatedTime: 15,
-    href: "/3zone",
-  },
-  noradrenaline: {
-    title: "Noradrenaline Training",
-    description:
-      "Critical medication administration training covering dosing, safety protocols, and clinical guidelines for noradrenaline administration.",
-    badge: "Critical Care",
-    badgeClass: "bg-purple-100 text-purple-800",
-    buttonClass: "bg-purple-600 hover:bg-purple-700",
-    topics: ["Dosage Calculations", "Safety Protocols", "Administration Routes"],
-    questions: 6,
-    estimatedTime: 15,
-    href: "/noradrenaline",
-  },
-  sepsis: {
-    title: "Sepsis Guidelines 2024",
-    description:
-      "Comprehensive assessment on the latest sepsis management protocols based on Surviving Sepsis Campaign, CDC Core Elements, and WHO Updates.",
-    badge: "Emergency Care",
-    badgeClass: "bg-red-100 text-red-800",
-    buttonClass: "bg-red-600 hover:bg-red-700",
-    topics: ["Fluid Resuscitation", "Antibiotic Protocols", "WHO Guidelines"],
-    questions: 8,
-    estimatedTime: 20,
-    href: "/sepsis",
-  },
-}
+import { getAllModules } from "@/lib/module-registry"
 
 export function DashboardContent() {
   const { progress, getOverallProgress } = useProgress()
   const overallProgress = getOverallProgress()
+  const modules = getAllModules()
 
   const formatDate = (dateString?: string) => {
     if (!dateString) return null
@@ -61,7 +24,7 @@ export function DashboardContent() {
   }
 
   const getTotalEstimatedTime = () => {
-    return Object.values(moduleConfig).reduce((total, config) => total + config.estimatedTime, 0)
+    return modules.reduce((total, module) => total + Number.parseInt(module.estimatedTime), 0)
   }
 
   return (
@@ -149,22 +112,24 @@ export function DashboardContent() {
       <div className="space-y-6">
         <h3 className="text-2xl font-bold text-gray-900">Available Training Modules</h3>
 
-        {Object.entries(moduleConfig).map(([moduleId, config]) => {
-          const moduleProgress = progress[moduleId as keyof typeof progress]
+        {modules.map((module) => {
+          const moduleProgress = progress[module.id] || { completed: false, attempts: 0 }
           const progressPercentage = moduleProgress.completed ? 100 : 0
 
           return (
-            <Card key={moduleId} className="hover:shadow-lg transition-shadow">
+            <Card key={module.id} className="hover:shadow-lg transition-shadow">
               <CardHeader>
                 <div className="flex items-start justify-between">
                   <div className="flex-1">
                     <div className="flex items-center space-x-3 mb-2">
-                      <CardTitle className="text-xl text-gray-900">{config.title}</CardTitle>
+                      <CardTitle className="text-xl text-gray-900">
+                        {module.icon} {module.title}
+                      </CardTitle>
                       {moduleProgress.completed && <CheckCircle className="h-5 w-5 text-green-600" />}
                     </div>
-                    <CardDescription className="text-base">{config.description}</CardDescription>
+                    <CardDescription className="text-base">{module.description}</CardDescription>
                   </div>
-                  <Badge className={config.badgeClass}>{config.badge}</Badge>
+                  <Badge className={module.color.badge}>{module.category.replace("-", " ").toUpperCase()}</Badge>
                 </div>
               </CardHeader>
               <CardContent>
@@ -172,10 +137,12 @@ export function DashboardContent() {
                   <div className="flex items-center justify-between text-sm text-gray-600">
                     <span>
                       Progress:{" "}
-                      {moduleProgress.completed ? `${config.questions}/${config.questions}` : `0/${config.questions}`}{" "}
+                      {moduleProgress.completed
+                        ? `${module.questionCount}/${module.questionCount}`
+                        : `0/${module.questionCount}`}{" "}
                       questions
                     </span>
-                    <span>~{config.estimatedTime} minutes</span>
+                    <span>~{module.estimatedTime}</span>
                   </div>
                   <Progress value={progressPercentage} className="h-2" />
 
@@ -184,7 +151,9 @@ export function DashboardContent() {
                     <div className="bg-green-50 border border-green-200 rounded-lg p-3">
                       <div className="flex items-center justify-between text-sm">
                         <div className="flex items-center space-x-4">
-                          <span className="text-green-800 font-medium">Best Score: {moduleProgress.bestScore}%</span>
+                          <span className="text-green-800 font-medium">
+                            Best Score: {moduleProgress.bestScore || 0}%
+                          </span>
                           <span className="text-green-700">Attempts: {moduleProgress.attempts}</span>
                           {moduleProgress.completedAt && (
                             <span className="text-green-700">Completed: {formatDate(moduleProgress.completedAt)}</span>
@@ -196,12 +165,11 @@ export function DashboardContent() {
 
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-4 text-sm text-gray-600">
-                      {config.topics.map((topic, index) => (
-                        <span key={index}>• {topic}</span>
-                      ))}
+                      <span>• {module.category.replace("-", " ")} training</span>
+                      <span>• {module.passingScore}% to pass</span>
                     </div>
-                    <Link href={config.href}>
-                      <Button className={config.buttonClass}>
+                    <Link href={module.route}>
+                      <Button className={module.color.primary}>
                         {moduleProgress.completed ? "Review Training" : "Start Training"}
                         <ChevronRight className="ml-2 h-4 w-4" />
                       </Button>

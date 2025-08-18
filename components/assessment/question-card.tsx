@@ -34,8 +34,12 @@ export function QuestionCard({
       </CardHeader>
       <CardContent>
         <RadioGroup
-          value={selectedAnswer?.toString()}
-          onValueChange={(value) => onAnswerSelect(Number.parseInt(value))}
+          value={selectedAnswer !== undefined ? selectedAnswer.toString() : ""}
+          onValueChange={(value) => {
+            if (value) {
+              onAnswerSelect(Number.parseInt(value))
+            }
+          }}
           className="space-y-4"
         >
           {question.options.map((option, index) => (
