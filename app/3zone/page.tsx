@@ -63,6 +63,141 @@ const questions = [
     ],
     correctAnswer: 1,
   },
+  {
+    id: 6,
+    category: "High-Risk Zone",
+    question: "Which areas are classified as high-risk zones?",
+    options: ["Patient bathrooms and isolation rooms", "Staff break rooms", "Hospital corridors", "Waiting areas"],
+    correctAnswer: 0,
+  },
+  {
+    id: 7,
+    category: "High-Risk Zone",
+    question: "What color equipment should be used in high-risk zones?",
+    options: ["Green", "Yellow", "Red", "Blue"],
+    correctAnswer: 2,
+  },
+  {
+    id: 8,
+    category: "Medium-Risk Zone",
+    question: "Which areas are typically classified as medium-risk zones?",
+    options: [
+      "Operating theaters",
+      "General patient rooms and nursing stations",
+      "Hospital entrances",
+      "Administrative offices",
+    ],
+    correctAnswer: 1,
+  },
+  {
+    id: 9,
+    category: "Medium-Risk Zone",
+    question: "What color equipment should be used in medium-risk zones?",
+    options: ["Red", "Yellow", "Green", "Blue"],
+    correctAnswer: 1,
+  },
+  {
+    id: 10,
+    category: "Low-Risk Zone",
+    question: "Which areas are classified as low-risk zones?",
+    options: ["Patient isolation rooms", "Operating theaters", "Public areas and corridors", "Intensive care units"],
+    correctAnswer: 2,
+  },
+  {
+    id: 11,
+    category: "Low-Risk Zone",
+    question: "What color equipment should be used in low-risk zones?",
+    options: ["Red", "Yellow", "Green", "Blue"],
+    correctAnswer: 2,
+  },
+  {
+    id: 12,
+    category: "Cleaning Sequence",
+    question: "In what order should zones be cleaned?",
+    options: [
+      "High-risk, Medium-risk, Low-risk",
+      "Low-risk, Medium-risk, High-risk",
+      "Medium-risk, Low-risk, High-risk",
+      "Any order is acceptable",
+    ],
+    correctAnswer: 1,
+  },
+  {
+    id: 13,
+    category: "PPE Requirements",
+    question: "What PPE is required when cleaning high-risk zones?",
+    options: ["Gloves only", "Gloves and apron", "Gloves, apron, and eye protection", "No PPE required"],
+    correctAnswer: 2,
+  },
+  {
+    id: 14,
+    category: "Disinfection",
+    question: "How long should disinfectant remain on surfaces in high-risk zones?",
+    options: ["30 seconds", "1 minute", "2-5 minutes (contact time)", "10 minutes"],
+    correctAnswer: 2,
+  },
+  {
+    id: 15,
+    category: "Equipment Storage",
+    question: "How should color-coded equipment be stored?",
+    options: [
+      "All together in one storage area",
+      "Separately in designated areas for each zone",
+      "In patient rooms",
+      "In staff break rooms",
+    ],
+    correctAnswer: 1,
+  },
+  {
+    id: 16,
+    category: "Cross-Contamination",
+    question: "What is the main risk of not following the 3-zone method?",
+    options: ["Equipment damage", "Cross-contamination between zones", "Increased cleaning time", "Staff fatigue"],
+    correctAnswer: 1,
+  },
+  {
+    id: 17,
+    category: "Documentation",
+    question: "What should be documented after cleaning each zone?",
+    options: ["Time started only", "Time completed and areas cleaned", "Staff member name only", "Equipment used only"],
+    correctAnswer: 1,
+  },
+  {
+    id: 18,
+    category: "Emergency Procedures",
+    question: "What should you do if you accidentally use wrong-colored equipment in a zone?",
+    options: [
+      "Continue cleaning",
+      "Stop, disinfect equipment, and restart with correct equipment",
+      "Switch to different zone",
+      "Report to supervisor only",
+    ],
+    correctAnswer: 1,
+  },
+  {
+    id: 19,
+    category: "Quality Control",
+    question: "How often should cleaning effectiveness be monitored?",
+    options: [
+      "Once per week",
+      "Once per month",
+      "Daily through visual inspection and periodic testing",
+      "Only when problems occur",
+    ],
+    correctAnswer: 2,
+  },
+  {
+    id: 20,
+    category: "Best Practices",
+    question: "What is the most important principle of the 3-zone cleaning method?",
+    options: [
+      "Speed of cleaning",
+      "Cost effectiveness",
+      "Preventing cross-contamination through systematic approach",
+      "Using minimal equipment",
+    ],
+    correctAnswer: 2,
+  },
 ]
 
 export default function ThreeZoneTraining() {
@@ -247,7 +382,7 @@ export default function ThreeZoneTraining() {
             <CardContent>
               <div className="grid grid-cols-3 gap-6 mb-6">
                 <div className="text-center p-4 bg-white rounded-lg border border-blue-100">
-                  <div className="text-3xl font-bold text-gray-900 mb-1">5</div>
+                  <div className="text-3xl font-bold text-gray-900 mb-1">20</div>
                   <div className="text-sm text-gray-600">Questions</div>
                 </div>
                 <div className="text-center p-4 bg-white rounded-lg border border-blue-100">
@@ -255,7 +390,7 @@ export default function ThreeZoneTraining() {
                   <div className="text-sm text-gray-600">Passing Score</div>
                 </div>
                 <div className="text-center p-4 bg-white rounded-lg border border-blue-100">
-                  <div className="text-3xl font-bold text-gray-900 mb-1">~10</div>
+                  <div className="text-3xl font-bold text-gray-900 mb-1">~25</div>
                   <div className="text-sm text-gray-600">Minutes</div>
                 </div>
               </div>
