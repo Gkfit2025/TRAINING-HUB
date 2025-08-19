@@ -4,7 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Progress } from "@/components/ui/progress"
-import { Award, ChevronRight, CheckCircle, Trophy, Target } from "lucide-react"
+import { ChevronRight, CheckCircle } from "lucide-react"
 import Link from "next/link"
 import { useProgress } from "@/lib/progress-context"
 import { getAllModules } from "@/lib/module-registry"
@@ -29,63 +29,9 @@ export function DashboardContent() {
 
   return (
     <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      {/* Welcome Section */}
       <div className="mb-8">
-        <h2 className="text-3xl font-bold text-gray-900 mb-2">Welcome to Your Training Dashboard</h2>
-        <p className="text-lg text-gray-600">Complete your required medical training modules and track your progress</p>
-      </div>
-
-      {/* Stats Overview */}
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
-        <Card>
-          <CardContent className="p-6">
-            <div className="flex items-center justify-between">
-              <div>
-                <p className="text-sm font-medium text-gray-600">Total Modules</p>
-                <p className="text-3xl font-bold text-gray-900">{overallProgress.totalModules}</p>
-              </div>
-              <Award className="h-8 w-8 text-blue-600" />
-            </div>
-          </CardContent>
-        </Card>
-
-        <Card>
-          <CardContent className="p-6">
-            <div className="flex items-center justify-between">
-              <div>
-                <p className="text-sm font-medium text-gray-600">Completed</p>
-                <p className="text-3xl font-bold text-gray-900">{overallProgress.completedModules}</p>
-              </div>
-              <CheckCircle className="h-8 w-8 text-green-600" />
-            </div>
-          </CardContent>
-        </Card>
-
-        <Card>
-          <CardContent className="p-6">
-            <div className="flex items-center justify-between">
-              <div>
-                <p className="text-sm font-medium text-gray-600">Completion Rate</p>
-                <p className="text-3xl font-bold text-gray-900">{overallProgress.completionRate}%</p>
-              </div>
-              <Target className="h-8 w-8 text-purple-600" />
-            </div>
-          </CardContent>
-        </Card>
-
-        <Card>
-          <CardContent className="p-6">
-            <div className="flex items-center justify-between">
-              <div>
-                <p className="text-sm font-medium text-gray-600">Average Score</p>
-                <p className="text-3xl font-bold text-gray-900">
-                  {overallProgress.averageScore > 0 ? `${overallProgress.averageScore}%` : "--"}
-                </p>
-              </div>
-              <Trophy className="h-8 w-8 text-orange-600" />
-            </div>
-          </CardContent>
-        </Card>
+        <h2 className="text-3xl font-bold text-gray-900 mb-2">Training Modules</h2>
+        <p className="text-lg text-gray-600">Select a module to begin your medical training</p>
       </div>
 
       {/* Overall Progress Bar */}
