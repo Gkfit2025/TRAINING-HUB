@@ -16,82 +16,77 @@ export default function HomePage() {
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "url('/medical-facility-entrance.png')",
+          backgroundImage: "url('/modern-hospital-lobby.png')",
         }}
-      >
-        <div className="absolute inset-0 bg-black/50" />
-      </div>
+      />
 
       <div className="relative z-10">
         <Header />
 
-        <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <div className="text-center mb-12">
-            <h1 className="text-5xl font-bold text-white mb-4">Medical Training Hub</h1>
-            <p className="text-xl text-gray-200 max-w-2xl mx-auto">
-              Complete your required medical training modules and track your progress
-            </p>
-          </div>
+        <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
+            {/* Left side - Title and Button */}
+            <div className="flex-1 text-center lg:text-left">
+              <h1 className="text-6xl font-bold mb-6 drop-shadow-lg animate-fade-in" style={{ color: "#2E8B57" }}>
+                Medical Training Hub
+              </h1>
+              <p className="text-xl text-white/90 max-w-2xl mb-8 drop-shadow">
+                Complete your required medical training modules and track your progress
+              </p>
+              <Link href="/modules">
+                <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg shadow-lg">
+                  View Training Modules
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </Link>
+            </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
-            <Card className="bg-white/90 backdrop-blur-sm border-0 shadow-lg">
-              <CardContent className="p-6">
-                <div className="flex items-center justify-between">
-                  <div>
-                    <p className="text-sm font-medium text-gray-600">Total Modules</p>
-                    <p className="text-3xl font-bold text-gray-900">{overallProgress.totalModules}</p>
-                  </div>
-                  <Award className="h-8 w-8 text-blue-600" />
-                </div>
-              </CardContent>
-            </Card>
+            {/* Right side - Stats Cards */}
+            <div className="flex-1 max-w-md">
+              <div className="grid grid-cols-2 gap-4">
+                <Card className="bg-white/95 backdrop-blur-sm border-0 shadow-xl">
+                  <CardContent className="p-4">
+                    <div className="text-center">
+                      <Award className="h-8 w-8 text-blue-600 mx-auto mb-2" />
+                      <p className="text-sm font-medium text-gray-600">Total Modules</p>
+                      <p className="text-2xl font-bold text-gray-900">{overallProgress.totalModules}</p>
+                    </div>
+                  </CardContent>
+                </Card>
 
-            <Card className="bg-white/90 backdrop-blur-sm border-0 shadow-lg">
-              <CardContent className="p-6">
-                <div className="flex items-center justify-between">
-                  <div>
-                    <p className="text-sm font-medium text-gray-600">Completed</p>
-                    <p className="text-3xl font-bold text-gray-900">{overallProgress.completedModules}</p>
-                  </div>
-                  <CheckCircle className="h-8 w-8 text-green-600" />
-                </div>
-              </CardContent>
-            </Card>
+                <Card className="bg-white/95 backdrop-blur-sm border-0 shadow-xl">
+                  <CardContent className="p-4">
+                    <div className="text-center">
+                      <CheckCircle className="h-8 w-8 text-green-600 mx-auto mb-2" />
+                      <p className="text-sm font-medium text-gray-600">Completed</p>
+                      <p className="text-2xl font-bold text-gray-900">{overallProgress.completedModules}</p>
+                    </div>
+                  </CardContent>
+                </Card>
 
-            <Card className="bg-white/90 backdrop-blur-sm border-0 shadow-lg">
-              <CardContent className="p-6">
-                <div className="flex items-center justify-between">
-                  <div>
-                    <p className="text-sm font-medium text-gray-600">Completion Rate</p>
-                    <p className="text-3xl font-bold text-gray-900">{overallProgress.completionRate}%</p>
-                  </div>
-                  <Target className="h-8 w-8 text-purple-600" />
-                </div>
-              </CardContent>
-            </Card>
+                <Card className="bg-white/95 backdrop-blur-sm border-0 shadow-xl">
+                  <CardContent className="p-4">
+                    <div className="text-center">
+                      <Target className="h-8 w-8 text-purple-600 mx-auto mb-2" />
+                      <p className="text-sm font-medium text-gray-600">Completion Rate</p>
+                      <p className="text-2xl font-bold text-gray-900">{overallProgress.completionRate}%</p>
+                    </div>
+                  </CardContent>
+                </Card>
 
-            <Card className="bg-white/90 backdrop-blur-sm border-0 shadow-lg">
-              <CardContent className="p-6">
-                <div className="flex items-center justify-between">
-                  <div>
-                    <p className="text-sm font-medium text-gray-600">Average Score</p>
-                    <p className="text-3xl font-bold text-gray-900">
-                      {overallProgress.averageScore > 0 ? `${overallProgress.averageScore}%` : "--"}
-                    </p>
-                  </div>
-                  <Trophy className="h-8 w-8 text-orange-600" />
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-
-          <div className="text-center">
-            <Link href="/modules">
-              <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg">
-                View Training Modules
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-            </Link>
+                <Card className="bg-white/95 backdrop-blur-sm border-0 shadow-xl">
+                  <CardContent className="p-4">
+                    <div className="text-center">
+                      <Trophy className="h-8 w-8 text-orange-600 mx-auto mb-2" />
+                      <p className="text-sm font-medium text-gray-600">Average Score</p>
+                      <p className="text-2xl font-bold text-gray-900">
+                        {overallProgress.averageScore > 0 ? `${overallProgress.averageScore}%` : "--"}
+                      </p>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
           </div>
         </main>
       </div>
