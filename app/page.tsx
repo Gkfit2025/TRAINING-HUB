@@ -96,6 +96,17 @@ export default function HomePage() {
                     </div>
                   </CardContent>
                 </Card>
+                <header className="bg-orange-700 text-white py-5 text-center sticky top-0 z-50">
+        <div className="flex items-center justify-center gap-4 mb-2">
+          <Image
+            src="/logo.jpeg"
+            alt="Logo"
+            width={60}
+            height={60}
+            className="rounded-full"
+          />
+          </div>
+      </header>
               </div>
             </div>
           </div>
