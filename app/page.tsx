@@ -90,15 +90,15 @@ export default function HomePage() {
           </div>
         </main>
 
-        {/* Logo and Grace Kennett Foundation Text */}
-        <div className="fixed bottom-4 left-4 flex items-center space-x-2 bg-white/95 backdrop-blur-sm p-3 rounded-lg shadow-xl">
-          <img
-            src="public/logo11.png"
-            alt="Grace Kennett Foundation Logo"
-            className="h-30 w-30 object-contain"
-          />
-          <p className="text-sm font-medium text-gray-900">Grace Kennett Foundation</p>
-        </div>
+       {/* Logo and Grace Kennett Foundation Text */}
+<div className="fixed bottom-4 left-4 flex items-center space-x-2 bg-white/95 backdrop-blur-sm p-3 rounded-lg shadow-xl">
+  <img
+    src="/logo11.png"
+    alt="Grace Kennett Foundation Logo"
+    className="h-30 w-30 object-contain"
+  />
+  <p className="text-sm font-medium text-gray-900">Grace Kennett Foundation</p>
+</div>
       </div>
     </div>
   )
