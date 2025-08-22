@@ -53,18 +53,7 @@ export default function HomePage() {
                     </div>
                   </CardContent>
                 </Card>
-<header 
-  className="bg-orange-700 text-white py-5 text-center sticky top-0 z-50">
-        <div className="flex items-center justify-center gap-4 mb-2">
-          <Image
-            src="/logo.jpeg"
-            alt="Logo"
-            width={60}
-            height={60}
-            className="rounded-full"
-          />
-          </div>
-      </header>
+
                 <Card className="bg-white/95 backdrop-blur-sm border-0 shadow-xl">
                   <CardContent className="p-4">
                     <div className="text-center">
@@ -96,17 +85,7 @@ export default function HomePage() {
                     </div>
                   </CardContent>
                 </Card>
-                <header className="bg-orange-700 text-white py-5 text-center sticky top-0 z-50">
-        <div className="flex items-center justify-center gap-4 mb-2">
-          <Image
-            src="/logo.jpeg"
-            alt="Logo"
-            width={60}
-            height={60}
-            className="rounded-full"
-          />
-          </div>
-            </div>
+              </div>
             </div>
           </div>
         </main>
