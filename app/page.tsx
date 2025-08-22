@@ -27,7 +27,7 @@ export default function HomePage() {
           <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
             {/* Left side - Title and Button */}
             <div className="flex-1 text-center lg:text-left">
-              <h1 className="text-6xl font-bold mb-6 drop-shadow-lg animate-fade-in" style={{ color: "A9F527" }}>
+              <h1 className="text-6xl font-bold mb-6 drop-shadow-lg animate-fade-in" style={{ color: "#A9F527" }}>
                 Medical Training Hub
               </h1>
               <p className="text-xl text-black/90 max-w-2xl mb-8 drop-shadow">
