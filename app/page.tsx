@@ -27,7 +27,7 @@ export default function HomePage() {
           <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
             {/* Left side - Title and Button */}
             <div className="flex-1 text-center lg:text-left">
-              <h1 className="text-6xl font-bold mb-6 drop-shadow-lg animate-fade-in" style={{ color: "#7a0099" }}>
+              <h1 className="text-6xl font-bold mb-6 drop-shadow-lg animate-fade-in" style={{ color: "A9F527" }}>
                 Medical Training Hub
               </h1>
               <p className="text-xl text-black/90 max-w-2xl mb-8 drop-shadow">
@@ -95,9 +95,9 @@ export default function HomePage() {
   <img
     src="/logo11.png"
     alt="Grace Kennett Foundation Logo"
-    className="h-30 w-30 object-contain"
+    className="h-20 w-20 object-contain"
   />
-  <p className="text-sm font-medium text-gray-900">Grace Kennett Foundation</p>
+  <p className="text-sm font-big text-gray-900">Grace Kennett Foundation</p>
 </div>
       </div>
     </div>
