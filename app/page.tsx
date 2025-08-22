@@ -95,7 +95,7 @@ export default function HomePage() {
           <img
             src="public/logo11.png"
             alt="Grace Kennett Foundation Logo"
-            className="h-20 w-20 object-contain"
+            className="h-30 w-30 object-contain"
           />
           <p className="text-sm font-medium text-gray-900">Grace Kennett Foundation</p>
         </div>
