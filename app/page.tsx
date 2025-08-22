@@ -93,7 +93,7 @@ export default function HomePage() {
         {/* Logo and Grace Kennett Foundation Text */}
         <div className="fixed bottom-4 left-4 flex items-center space-x-2 bg-white/95 backdrop-blur-sm p-3 rounded-lg shadow-xl">
           <img
-            src="/public/logo.jpg"
+            src="public/logo.jpg"
             alt="Grace Kennett Foundation Logo"
             className="h-12 w-12 object-contain"
           />
