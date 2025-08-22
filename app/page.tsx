@@ -106,8 +106,7 @@ export default function HomePage() {
             className="rounded-full"
           />
           </div>
-      </header>
-              </div>
+                    </div>
             </div>
           </div>
         </main>
