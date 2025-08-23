@@ -69,17 +69,7 @@ export function Header({ title, subtitle, moduleType }: HeaderProps) {
                   >
                     GRACE KENNETT FOUNDATION
                   </h1>
-                  <div
-                    style={{
-                      color: "#fff",
-                      fontWeight: "bold",
-                      fontSize: "1rem",
-                      marginTop: "2px",
-                      fontFamily: "inherit",
-                    }}
-                  >
-                    Complete your required medical training modules and track your progress
-                  </div>
+                  {/* Removed subtitle as instructed */}
                 </div>
               </Link>
               {/* Breadcrumb for non-home pages */}
