@@ -211,18 +211,33 @@ export function Header({ title, subtitle, moduleType }: HeaderProps) {
       >
         <div
           style={{
-            color: '#FFA500',
+            color: '#001BB7',
             fontFamily: 'Bookman Old Style, serif',
             fontSize: '1.1rem',
             lineHeight: '1.2',
             fontWeight: 600,
             letterSpacing: '0.5px',
             textShadow: '0 1px 2px rgba(0,0,0,0.04)',
+            display: 'flex',
+            flexDirection: 'column',
           }}
         >
-          Medical Training Platform
-          <br />
-          Hospital Staff Education Program
+          <span>
+            Medical Training Platform
+            <br />
+            Hospital Staff Education Program
+          </span>
+          <span
+            style={{
+              color: '#fff',
+              fontSize: '1rem',
+              fontWeight: 500,
+              marginTop: '4px',
+              fontFamily: 'inherit',
+            }}
+          >
+            Complete your required medical training modules and track your progress
+          </span>
         </div>
       </div>
     </>
