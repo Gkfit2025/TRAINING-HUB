@@ -16,7 +16,7 @@ export default function HomePage() {
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "url('/watercolor-hospital.jpg')",
+          backgroundImage: "url('/modern-hospital-lobby.png')",
         }}
       />
 
@@ -27,10 +27,10 @@ export default function HomePage() {
           <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
             {/* Left side - Title and Button */}
             <div className="flex-1 text-center lg:text-left">
-              <h1 className="text-6xl font-bold mb-6 drop-shadow-lg animate-fade-in" style={{ color: "#6700F7" }}>
+              <h1 className="text-6xl font-bold mb-6 drop-shadow-lg animate-fade-in" style={{ color: "#2E8B57" }}>
                 Medical Training Hub
               </h1>
-              <p className="text-xl text-black/90 max-w-2xl mb-8 drop-shadow">
+              <p className="text-xl text-white/90 max-w-2xl mb-8 drop-shadow">
                 Complete your required medical training modules and track your progress
               </p>
               <Link href="/modules">
@@ -89,16 +89,6 @@ export default function HomePage() {
             </div>
           </div>
         </main>
-
-       {/* Logo and Grace Kennett Foundation Text */}
-<div className="fixed bottom-4 left-4 flex items-center space-x-2 bg-white/95 backdrop-blur-sm p-3 rounded-lg shadow-xl">
-  <img
-    src="/logo11.png"
-    alt="Grace Kennett Foundation Logo"
-    className="h-20 w-20 object-contain"
-  />
-  <p className="text-sm font-big text-gray-900">Grace Kennett Foundation</p>
-</div>
       </div>
     </div>
   )
