@@ -46,7 +46,7 @@ export function Header({ title, subtitle, moduleType }: HeaderProps) {
           <div className="flex items-center space-x-4">
             <Link href="/" className="flex items-center space-x-3">
               <div className="w-10 h-10 bg-red-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">M</span>
+                <span className="text-white font-bold text-lg">GKF</span>
               </div>
               {isHomePage ? (
                 <div>
