@@ -41,7 +41,8 @@ export function Header({ title, subtitle, moduleType }: HeaderProps) {
 
   return (
     <>
-      <header className="bg-white shadow-sm border-b sticky top-0 z-50">
+      {/* Header with custom background color */}
+      <header className="bg-[#D6DAC8] shadow-sm border-b sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             {/* Left side - Logo and title */}
@@ -197,7 +198,7 @@ export function Header({ title, subtitle, moduleType }: HeaderProps) {
         </div>
       </header>
 
-      {/* Fixed left bottom corner text */}
+      {/* Fixed left bottom corner text - Footer with custom color */}
       <div
         style={{
           position: 'fixed',
@@ -205,9 +206,8 @@ export function Header({ title, subtitle, moduleType }: HeaderProps) {
           bottom: 0,
           zIndex: 50,
           padding: '12px 24px',
-          background: 'rgba(255,255,255,0.85)',
         }}
-        className="shadow-md"
+        className="shadow-md w-full bg-[#9CAFAA]"
       >
         <div
           style={{
