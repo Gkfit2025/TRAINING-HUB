@@ -1,4 +1,4 @@
-"use client"
+"use client"  
 
 import { Header } from "@/components/navigation/header"
 import { Button } from "@/components/ui/button"
