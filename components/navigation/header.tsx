@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Home, Menu, X } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 import { usePathname } from "next/navigation"
 import { useState } from "react"
 
@@ -43,11 +44,17 @@ export function Header({ title, subtitle, moduleType }: HeaderProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Left side - Logo and title */}
-
-               <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-4">
             <Link href="/" className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-red-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">GKF</span>
+              <div className="w-10 h-10 rounded-lg flex items-center justify-center bg-white">
+                <Image
+                  src="/logo11.png"
+                  alt="Logo"
+                  width={40}
+                  height={40}
+                  className="object-contain w-10 h-10"
+                  priority
+                />
               </div>
               {isHomePage ? (
                 <div>
@@ -124,7 +131,13 @@ export function Header({ title, subtitle, moduleType }: HeaderProps) {
             )}
 
             {/* Mobile menu button */}
-            <Button variant="ghost" size="sm" className="lg:hidden" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+            <Button
+              aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+              variant="ghost"
+              size="sm"
+              className="lg:hidden"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            >
               {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             </Button>
           </div>
