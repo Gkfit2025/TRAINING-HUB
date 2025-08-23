@@ -44,37 +44,7 @@ export function Header({ title, subtitle, moduleType }: HeaderProps) {
         <div className="flex items-center justify-between h-16">
           {/* Left side - Logo and title */}
 
-        <div className="w-10 h-10 relative flex items-center justify-center">
-                <Image
-                  src="/logo11.png"
-                  alt="GKF Logo"
-                  fill
-                  style={{ objectFit: 'contain' }}
-                  className="rounded-lg"
-                  priority
-                />
-              </div>
-              {isHomePage ? (
-                <div>
-                  <h1 className="text-xl font-bold text-gray-900">Medical Training Platform</h1>
-                  <p className="text-sm text-gray-600 hidden sm:block">Hospital Staff Education Program</p>
-                </div>
-              ) : (
-                <div className="hidden sm:block">
-                  <h1 className="text-lg font-semibold text-gray-900">Medical Training Platform</h1>
-                </div>
-              )}
-            </Link>
-            {/* ...breadcrumb... */}
-          </div>
-          {/* ...rest of your code... */}
-        </div>
-        {/* ...rest of your code... */}
-      </div>
-    </header>
-  )
-}
-              <div className="flex items-center space-x-4">
+               <div className="flex items-center space-x-4">
             <Link href="/" className="flex items-center space-x-3">
               <div className="w-10 h-10 bg-red-600 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-lg">GKF</span>
