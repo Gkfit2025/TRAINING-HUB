@@ -43,6 +43,16 @@ export function Header({ title, subtitle, moduleType }: HeaderProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Left side - Logo and title */}
+
+          <div className="w-10 h-10 relative flex items-center justify-center">
+                <Image
+                  src="/logo11.png"
+                  alt="GKF Logo"
+                  fill
+                  style={{ objectFit: 'contain' }}
+                  className="rounded-lg"
+                  priority
+                />
             
           <div className="flex items-center space-x-4">
             <Link href="/" className="flex items-center space-x-3">
