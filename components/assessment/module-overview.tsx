@@ -101,6 +101,41 @@ export function ModuleOverview({
             </Button>
           </div>
         </CardContent>
+
+
+
+         {/* Contact footer */}
+        <div className="border-t border-gray-200 p-4 text-center text-sm text-gray-600 bg-gray-50">
+          <div className="flex items-center justify-center mb-1">
+            <MessageSquare className="h-4 w-4 mr-1 text-gray-500" />
+            <span>For suggestions WhatsApp{" "} 
+             <a
+                href="https://gkfmadurai.in/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:text-blue-800 underline"
+              >
+                 GKF-IT Team
+              </a>{" "} at +91 9842194442</span>
+          </div>
+          <div className="flex items-center justify-center">
+           /* 
+            Place for the Butterfly Logo of GKF
+            To be put in by Sathy Mam
+            */
+            <span>
+              <a
+                href="https://creativecommons.org/licenses/by/4.0/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:text-blue-800 underline"
+              >
+                 License 4.0
+              </a>{" "}
+              • Grace Kennett Foundation Hospital, 8, Kennett Road Madurai, Tamil Nadu, India
+            </span>
+          </div>
+        </div>
       </Card>
     </main>
   )
