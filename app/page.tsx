@@ -16,7 +16,7 @@ export default function HomePage() {
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "url('/hospital1.png')",
+          backgroundImage: "url('/bg1.png')",
         }}
       />
 
