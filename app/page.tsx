@@ -110,10 +110,12 @@ export default function HomePage() {
               </a>{" "} at +91 9842194442</span>
           </div>
           <div className="flex items-center justify-center">
-           /* 
-            Place for the Butterfly Logo of GKF
-            To be put in by Sathy Mam
-            */
+           <img
+            src="/logo11.png"
+            alt="Grace Kennett Foundation Logo"
+            className="h-10 w-10 sm:h-12 sm:w-12 object-contain"
+            onError={(e) => (e.currentTarget.src = "/logo11.png")} // Fallback if logo11.png fails
+          />
             <span>
               <a
                 href="https://creativecommons.org/licenses/by/4.0/"
@@ -129,16 +131,7 @@ export default function HomePage() {
         </div>
         
       </div>
-     {/* Footer with Logo and Grace Kennett Foundation Text placed outside of main */}
-        <footer className="w-full max-w-4xl text-center mt-6 text-gray-600 text-sm">
-          <img
-            src="/logo11.png"
-            alt="Grace Kennett Foundation Logo"
-            className="h-10 w-10 sm:h-12 sm:w-12 object-contain"
-            onError={(e) => (e.currentTarget.src = "/logo11.png")} // Fallback if logo11.png fails
-          />
-          <p className="text-xs sm:text-sm font-medium text-gray-900"> &copy; {new Date().getFullYear()} Grace Kennett Foundation  • Training Modules. All rights reserved.</p>
-         </footer>
+    
     </div>
   )
 }
