@@ -99,10 +99,10 @@ export default function HomePage() {
         {/* Logo and Grace Kennett Foundation Text */}
         <div className="fixed bottom-2 sm:bottom-4 left-2 sm:left-4 flex items-center space-x-2 bg-white/95 backdrop-blur-sm p-2 sm:p-3 rounded-lg shadow-xl">
           <img
-            src="/logo.png"
+            src="/logo11.png"
             alt="Grace Kennett Foundation Logo"
             className="h-10 w-10 sm:h-12 sm:w-12 object-contain"
-            onError={(e) => (e.currentTarget.src = "/fallback-logo.png")} // Fallback if logo.png fails
+            onError={(e) => (e.currentTarget.src = "/logo11.png")} // Fallback if logo11.png fails
           />
           <p className="text-xs sm:text-sm font-medium text-gray-900">Grace Kennett Foundation</p>
         </div>
