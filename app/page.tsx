@@ -96,8 +96,7 @@ export default function HomePage() {
           </div>
         </main>
 
-        </div>
-
+        {/* Footer with Logo and Grace Kennett Foundation Text placed outside of main */}
          <div className="border-t border-gray-200 p-4 text-center text-sm text-gray-600 bg-gray-50">
           <div className="flex items-center justify-center mb-1">
             <p className="h-4 w-4 mr-1 text-gray-500" />
@@ -134,6 +133,6 @@ export default function HomePage() {
         
       </div>
     
-    
+    </div>
   )
 }
