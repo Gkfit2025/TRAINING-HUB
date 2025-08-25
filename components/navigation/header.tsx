@@ -93,8 +93,8 @@ export function Header({ title, subtitle, moduleType }: HeaderProps) {
               </Link>
               <Link
                 href="/3zone"
-                className={`text-sm font-medium transition-colors hover:text-blue-600 ${
-                  pathname.startsWith("/3zone") ? "text-blue-600" : "text-gray-600"
+                className={`text-sm font-medium transition-colors hover:text-white-900 ${
+                  pathname.startsWith("/3zone") ? "text-white-600" : "text-white-600"
                 }`}
               >
                 3Zone Training
