@@ -17,18 +17,18 @@ interface HeaderProps {
 const moduleConfig = {
   "3zone": {
     badge: "3Zone Training",
-    badgeClass: "bg-blue-100 text-blue-800",
-    color: "blue",
+    badgeClass: "bg-white-100 text-white-800",
+    color: "white",
   },
   noradrenaline: {
     badge: "Noradrenaline Training",
-    badgeClass: "bg-purple-100 text-purple-800",
-    color: "purple",
+    badgeClass: "bg-white-100 text-white-800",
+    color: "white",
   },
   sepsis: {
     badge: "Sepsis Guidelines 2024",
-    badgeClass: "bg-red-100 text-red-800",
-    color: "red",
+    badgeClass: "bg-white-100 text-white-800",
+    color: "white",
   },
 }
 
@@ -42,7 +42,7 @@ export function Header({ title, subtitle, moduleType }: HeaderProps) {
   return (
     <>
       {/* Header with custom background color */}
-      <header className="bg-[#3D74B6] shadow-sm border-b sticky top-0 z-50">
+      <header className="bg-[#055285] shadow-sm border-b sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             {/* Left side - Logo and title */}
