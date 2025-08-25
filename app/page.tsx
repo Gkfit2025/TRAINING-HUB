@@ -1,11 +1,53 @@
-"use client"  
+I can help with that. Here's the updated React component code that implements the requested changes for the header and adds a logout button.
+
+-----
+
+### **Header Changes**
+
+The requested changes involve modifying the header component's styles and adding a logout button.
+
+  * **Font Style and Size**: The font for the navigation links ("Dashboard," "3Zone Training," "Noradrenaline," "Sepsis Guidelines") will be set to Arial with a size of 13px and a color of white.
+  * **Logout Button**: A logout button will be added to the right side of the header. It will be a `<Button>` component from the specified library, styled to stand out.
+
+-----
+
+### **Updated Code**
+
+```jsx
+"use client"
 
 import { Header } from "@/components/navigation/header"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Award, CheckCircle, Trophy, Target, ArrowRight } from "lucide-react"
+import { Award, CheckCircle, Trophy, Target, ArrowRight, LogOut } from "lucide-react"
 import Link from "next/link"
 import { useProgress } from "@/lib/progress-context"
+
+// Custom Header component with updated styles and logout button
+const CustomHeader = () => {
+  return (
+    <header className="flex justify-between items-center py-4 px-6 bg-transparent">
+      <nav className="flex items-center space-x-6">
+        <Link href="/dashboard" className="text-white text-[13px] font-medium" style={{ fontFamily: "Arial" }}>
+          Dashboard
+        </Link>
+        <Link href="/3zone-training" className="text-white text-[13px] font-medium" style={{ fontFamily: "Arial" }}>
+          3Zone Training
+        </Link>
+        <Link href="/noradrenaline" className="text-white text-[13px] font-medium" style={{ fontFamily: "Arial" }}>
+          Noradrenaline
+        </Link>
+        <Link href="/sepsis-guidelines" className="text-white text-[13px] font-medium" style={{ fontFamily: "Arial" }}>
+          Sepsis Guidelines
+        </Link>
+      </nav>
+      <Button variant="ghost" className="text-white hover:bg-white/10" onClick={() => console.log("Logout clicked")}>
+        <LogOut className="mr-2 h-4 w-4" />
+        Logout
+      </Button>
+    </header>
+  )
+}
 
 export default function HomePage() {
   const { getOverallProgress } = useProgress()
@@ -21,7 +63,8 @@ export default function HomePage() {
       />
 
       <div className="relative z-10">
-        <Header />
+        {/* Replace the old Header component with the new CustomHeader */}
+        <CustomHeader />
 
         <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
@@ -30,7 +73,7 @@ export default function HomePage() {
               <h1 className="text-6xl font-bold mb-6 drop-shadow-lg animate-fade-in" style={{ color: "#004030" }}>
                 Medical Training Hub
               </h1>
-              <p className="text-xl text- white/90 max-w-2xl mb-8 drop-shadow">
+              <p className="text-xl text-white/90 max-w-2xl mb-8 drop-shadow">
                 Complete your required medical training modules and track your progress
               </p>
               <Link href="/modules">
