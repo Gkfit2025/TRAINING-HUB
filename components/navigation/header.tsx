@@ -2,7 +2,7 @@
 
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { Home, Menu, X } from "lucide-react"
+import { Home, Menu, X, LogOut } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 import { usePathname } from "next/navigation"
@@ -17,18 +17,18 @@ interface HeaderProps {
 const moduleConfig = {
   "3zone": {
     badge: "3Zone Training",
-    badgeClass: "bg-white-100 text-white-800",
-    color: "white",
+    badgeClass: "bg-gray-100 text-gray-800", // Changed from white
+    color: "gray",
   },
   noradrenaline: {
     badge: "Noradrenaline Training",
-    badgeClass: "bg-white-100 text-white-800",
-    color: "white",
+    badgeClass: "bg-gray-100 text-gray-800", // Changed from white
+    color: "gray",
   },
   sepsis: {
     badge: "Sepsis Guidelines 2024",
-    badgeClass: "bg-white-100 text-white-800",
-    color: "white",
+    badgeClass: "bg-gray-100 text-gray-800", // Changed from white
+    color: "gray",
   },
 }
 
@@ -69,12 +69,11 @@ export function Header({ title, subtitle, moduleType }: HeaderProps) {
                   >
                     GRACE KENNETT FOUNDATION
                   </h1>
-                  {/* Removed subtitle as instructed */}
                 </div>
               </Link>
               {/* Breadcrumb for non-home pages */}
               {!isHomePage && (
-                <div className="hidden md:flex items-center space-x-2 text-sm text-white-500">
+                <div className="hidden md:flex items-center space-x-2 text-sm text-gray-800">
                   <span>/</span>
                   <span className="text-gray-900">{title || "Training Module"}</span>
                 </div>
@@ -85,32 +84,32 @@ export function Header({ title, subtitle, moduleType }: HeaderProps) {
             <nav className="hidden lg:flex items-center space-x-8">
               <Link
                 href="/"
-                className={`text-sm font-medium transition-colors hover:text-gray-900 ${
-                  isHomePage ? "text-white-900" : "text-gray-600"
+                className={`text-sm font-medium transition-colors hover:text-white ${
+                  isHomePage ? "text-white" : "text-gray-900"
                 }`}
               >
                 Dashboard
               </Link>
               <Link
                 href="/3zone"
-                className={`text-sm font-medium transition-colors hover:text-white-900 ${
-                  pathname.startsWith("/3zone") ? "text-white-600" : "text-white-600"
+                className={`text-sm font-medium transition-colors hover:text-white ${
+                  pathname.startsWith("/3zone") ? "text-gray-900" : "text-gray-900"
                 }`}
               >
                 3Zone Training
               </Link>
               <Link
                 href="/noradrenaline"
-                className={`text-sm font-medium transition-colors hover:text-white-600 ${
-                  pathname.startsWith("/noradrenaline") ? "text-white-600" : "text-white-600"
+                className={`text-sm font-medium transition-colors hover:text-white ${
+                  pathname.startsWith("/noradrenaline") ? "text-gray-900" : "text-gray-900"
                 }`}
               >
                 Noradrenaline
               </Link>
               <Link
                 href="/sepsis"
-                className={`text-sm font-medium transition-colors hover:text-white-600 ${
-                  pathname.startsWith("/sepsis") ? "text-white-600" : "text-white-600"
+                className={`text-sm font-medium transition-colors hover:text-white ${
+                  pathname.startsWith("/sepsis") ? "text-gray-900" : "text-gray-900"
                 }`}
               >
                 Sepsis Guidelines
@@ -125,14 +124,17 @@ export function Header({ title, subtitle, moduleType }: HeaderProps) {
                 </Badge>
               )}
 
-              {!isHomePage && (
-                <Link href="/" className="lg:hidden">
-                  <Button variant="ghost" size="sm" className="flex items-center space-x-2">
-                    <Home className="h-4 w-4" />
-                    <span className="hidden sm:inline">Dashboard</span>
-                  </Button>
-                </Link>
-              )}
+              {/* Logout button */}
+              <Link href="/api/auth/logout">
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  className="flex items-center space-x-2 text-gray-800 hover:text-white"
+                >
+                  <LogOut className="h-4 w-4" />
+                  <span className="hidden sm:inline">Logout</span>
+                </Button>
+              </Link>
 
               {/* Mobile menu button */}
               <Button
@@ -198,7 +200,6 @@ export function Header({ title, subtitle, moduleType }: HeaderProps) {
           )}
         </div>
       </header>
-      {/* The bottom fixed text has been removed as requested */}
     </>
   )
 }
