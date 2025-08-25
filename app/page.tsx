@@ -128,6 +128,7 @@ export default function HomePage() {
               </a>{" "}
               • Grace Kennett Foundation Hospital, 8, Kennett Road Madurai, Tamil Nadu, India
             </span>
+             <p className="text-xs sm:text-sm font-medium text-gray-900"> &copy; {new Date().getFullYear()} Grace Kennett Foundation Training Modules. All rights reserved.</p>
           </div>
         </div>
         
