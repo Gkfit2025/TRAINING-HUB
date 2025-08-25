@@ -101,16 +101,16 @@ export function Header({ title, subtitle, moduleType }: HeaderProps) {
               </Link>
               <Link
                 href="/noradrenaline"
-                className={`text-sm font-medium transition-colors hover:text-purple-600 ${
-                  pathname.startsWith("/noradrenaline") ? "text-purple-600" : "text-gray-600"
+                className={`text-sm font-medium transition-colors hover:text-white-600 ${
+                  pathname.startsWith("/noradrenaline") ? "text-white-600" : "text-white-600"
                 }`}
               >
                 Noradrenaline
               </Link>
               <Link
                 href="/sepsis"
-                className={`text-sm font-medium transition-colors hover:text-red-600 ${
-                  pathname.startsWith("/sepsis") ? "text-red-600" : "text-gray-600"
+                className={`text-sm font-medium transition-colors hover:text-white-600 ${
+                  pathname.startsWith("/sepsis") ? "text-white-600" : "text-white-600"
                 }`}
               >
                 Sepsis Guidelines
