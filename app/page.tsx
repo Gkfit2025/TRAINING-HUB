@@ -33,7 +33,7 @@ export default function HomePage() {
               >
                 Medical Training Hub
               </h1>
-              <p className="text-base sm:text-lg lg:text-xl text-white/90 max-w-xl sm:max-w-2xl mb-6 sm:mb-8 drop-shadow">
+              <p className="text-base sm:text-lg lg:text-xl text-gray/90 max-w-xl sm:max-w-2xl mb-6 sm:mb-8 drop-shadow">
                 Complete your required medical training modules and track your progress
               </p>
               <Link href="/modules">
