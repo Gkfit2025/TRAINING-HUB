@@ -2,7 +2,7 @@
 
 import type React from "react"
 
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent, CardHeader, CardFooter, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { AlertTriangle } from "lucide-react"
@@ -101,7 +101,8 @@ export function ModuleOverview({
             </Button>
           </div>
 
-         {/* Contact footer */}
+         {/* Card Footer */}
+       <CardFooter className="text-center">
         <div className="border-t border-gray-200 p-4 text-center text-sm text-gray-600 bg-gray-50">
           <div className="flex items-center justify-center mb-1">
             <MessageSquare className="h-4 w-4 mr-1 text-gray-500" />
@@ -133,6 +134,7 @@ export function ModuleOverview({
             </span>
           </div>
         </div>
+      </CardFooter>
       </CardContent>
     </Card>
   </main>
