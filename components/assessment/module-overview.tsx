@@ -100,9 +100,6 @@ export function ModuleOverview({
               Start Assessment
             </Button>
           </div>
-        </CardContent>
-
-
 
          {/* Contact footer */}
         <div className="border-t border-gray-200 p-4 text-center text-sm text-gray-600 bg-gray-50">
@@ -136,7 +133,8 @@ export function ModuleOverview({
             </span>
           </div>
         </div>
-      </Card>
-    </main>
+      </CardContent>
+    </Card>
+  </main>
   )
 }
