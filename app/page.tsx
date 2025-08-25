@@ -96,8 +96,9 @@ export default function HomePage() {
           </div>
         </main>
 
-        {/* Footer with Logo and Grace Kennett Foundation Text placed outside of main */}
-       // <div className="fixed bottom-2 sm:bottom-4 left-2 sm:left-4 flex items-center space-x-2 bg-white/95 backdrop-blur-sm p-2 sm:p-3 rounded-lg shadow-xl">
+       
+      </div>
+     {/* Footer with Logo and Grace Kennett Foundation Text placed outside of main */}
         <footer className="w-full max-w-4xl text-center mt-6 text-gray-600 text-sm">
           <img
             src="/logo11.png"
@@ -107,8 +108,6 @@ export default function HomePage() {
           />
           <p className="text-xs sm:text-sm font-medium text-gray-900"> &copy; {new Date().getFullYear()} Grace Kennett Foundation Training Modules. All rights reserved.</p>
          </footer>
-        //</div>
-      </div>
     </div>
   )
 }
