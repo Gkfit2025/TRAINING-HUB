@@ -3,7 +3,7 @@
 import { Header } from "@/components/navigation/header"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Award, CheckCircle, Trophy, Target, ArrowRight } from "lucide-react"
+import { Award, CheckCircle, Trophy, Target, MessageSquare, ArrowRight } from "lucide-react"
 import Link from "next/link"
 import { useProgress } from "@/lib/progress-context"
 
