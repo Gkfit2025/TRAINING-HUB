@@ -74,7 +74,7 @@ export function Header({ title, subtitle, moduleType }: HeaderProps) {
               </Link>
               {/* Breadcrumb for non-home pages */}
               {!isHomePage && (
-                <div className="hidden md:flex items-center space-x-2 text-sm text-gray-500">
+                <div className="hidden md:flex items-center space-x-2 text-sm text-white-500">
                   <span>/</span>
                   <span className="text-gray-900">{title || "Training Module"}</span>
                 </div>
@@ -86,7 +86,7 @@ export function Header({ title, subtitle, moduleType }: HeaderProps) {
               <Link
                 href="/"
                 className={`text-sm font-medium transition-colors hover:text-gray-900 ${
-                  isHomePage ? "text-gray-900" : "text-gray-600"
+                  isHomePage ? "text-white-900" : "text-gray-600"
                 }`}
               >
                 Dashboard
