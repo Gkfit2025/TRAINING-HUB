@@ -1,19 +1,3 @@
-I can help with that. Here's the updated React component code that implements the requested changes for the header and adds a logout button.
-
------
-
-### **Header Changes**
-
-The requested changes involve modifying the header component's styles and adding a logout button.
-
-  * **Font Style and Size**: The font for the navigation links ("Dashboard," "3Zone Training," "Noradrenaline," "Sepsis Guidelines") will be set to Arial with a size of 13px and a color of white.
-  * **Logout Button**: A logout button will be added to the right side of the header. It will be a `<Button>` component from the specified library, styled to stand out.
-
------
-
-### **Updated Code**
-
-```jsx
 "use client"
 
 import { Header } from "@/components/navigation/header"
