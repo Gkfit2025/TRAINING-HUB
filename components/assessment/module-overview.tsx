@@ -2,10 +2,10 @@
 
 import type React from "react"
 
-import { Card, CardContent, CardHeader, CardFooter, CardTitle, MessageSquare } from "@/components/ui/card"
+import { Card, CardContent, CardHeader, CardFooter, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { AlertTriangle } from "lucide-react"
+import { AlertTriangle, MessageSquare } from "lucide-react"
 
 interface ModuleOverviewProps {
   title: string
