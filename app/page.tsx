@@ -16,7 +16,7 @@ export default function HomePage() {
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "url('/gkfbg.png')",
+          backgroundImage: "url('/gkfbg2.png')",
         }}
       />
 
@@ -29,7 +29,7 @@ export default function HomePage() {
             <div className="flex-1 text-center lg:text-left">
               <h1
                 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 drop-shadow-lg animate-fade-in"
-                style={{ color: "#004030" }}
+                style={{ color: "##0033cc" }}
               >
                 Medical Training Hub
               </h1>
