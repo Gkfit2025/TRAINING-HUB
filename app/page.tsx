@@ -112,7 +112,7 @@ export default function HomePage() {
           </div>
           <div className="flex items-center justify-center">
            <img
-            src="/.png"
+            src="/butterfly-Photoroom.png"
             alt="Grace Kennett Foundation Logo"
             className="h-10 w-10 sm:h-12 sm:w-12 object-contain"
             onError={(e) => (e.currentTarget.src = "/butterfly-Photoroom.png")} // Fallback if logo11.png fails
