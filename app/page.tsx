@@ -29,7 +29,7 @@ export default function HomePage() {
             <div className="flex-1 text-center lg:text-left">
               <h1
                 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 drop-shadow-lg animate-fade-in"
-                style={{ color: "#f76002" }}
+                style={{ color: "#ff0000" }}
               >
                 Medical Training Hub
               </h1>
