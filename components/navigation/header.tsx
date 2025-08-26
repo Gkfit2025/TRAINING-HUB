@@ -50,7 +50,7 @@ export function Header({ title, subtitle, moduleType }: HeaderProps) {
               <Link href="/" className="flex items-center space-x-3">
                 <div className="w-10 h-10 rounded-lg flex items-center justify-center bg-white">
                   <Image
-                    src="/logo12.png"
+                    src="/logo13.png"
                     alt="Logo"
                     width={40}
                     height={40}
