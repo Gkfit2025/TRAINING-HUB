@@ -86,7 +86,7 @@ export function Header({ title, subtitle, moduleType }: HeaderProps) {
               <Link
                 href="/"
                 className={`text-sm font-medium transition-colors hover:text-gray-900 ${
-                  isHomePage ? "text-white-900" : "text-gray-600"
+                  isHomePage ? "text-white-900" : "text-gray-700"
                 }`}
               >
                 Dashboard
@@ -94,7 +94,7 @@ export function Header({ title, subtitle, moduleType }: HeaderProps) {
               <Link
                 href="/3zone"
                 className={`text-sm font-medium transition-colors hover:text-blue-600 ${
-                  pathname.startsWith("/3zone") ? "text-blue-600" : "text-gray-600"
+                  pathname.startsWith("/3zone") ? "text-blue-600" : "text-gray-700"
                 }`}
               >
                 3Zone Training
@@ -102,7 +102,7 @@ export function Header({ title, subtitle, moduleType }: HeaderProps) {
               <Link
                 href="/noradrenaline"
                 className={`text-sm font-medium transition-colors hover:text-purple-600 ${
-                  pathname.startsWith("/noradrenaline") ? "text-purple-600" : "text-gray-600"
+                  pathname.startsWith("/noradrenaline") ? "text-purple-600" : "text-gray-700"
                 }`}
               >
                 Noradrenaline
@@ -110,7 +110,7 @@ export function Header({ title, subtitle, moduleType }: HeaderProps) {
               <Link
                 href="/sepsis"
                 className={`text-sm font-medium transition-colors hover:text-red-600 ${
-                  pathname.startsWith("/sepsis") ? "text-red-600" : "text-gray-600"
+                  pathname.startsWith("/sepsis") ? "text-red-600" : "text-gray-700"
                 }`}
               >
                 Sepsis Guidelines
@@ -154,7 +154,7 @@ export function Header({ title, subtitle, moduleType }: HeaderProps) {
                 <Link
                   href="/"
                   className={`block px-3 py-2 text-base font-medium rounded-md transition-colors ${
-                    isHomePage ? "bg-gray-100 text-gray-900" : "text-gray-600 hover:text-gray-900 hover:bg-gray-50"
+                    isHomePage ? "bg-gray-100 text-gray-900" : "text-gray-700 hover:text-gray-900 hover:bg-gray-50"
                   }`}
                   onClick={() => setMobileMenuOpen(false)}
                 >
@@ -165,7 +165,7 @@ export function Header({ title, subtitle, moduleType }: HeaderProps) {
                   className={`block px-3 py-2 text-base font-medium rounded-md transition-colors ${
                     pathname.startsWith("/3zone")
                       ? "bg-blue-50 text-blue-600"
-                      : "text-gray-600 hover:text-blue-600 hover:bg-blue-50"
+                      : "text-gray-700 hover:text-blue-600 hover:bg-blue-50"
                   }`}
                   onClick={() => setMobileMenuOpen(false)}
                 >
@@ -176,7 +176,7 @@ export function Header({ title, subtitle, moduleType }: HeaderProps) {
                   className={`block px-3 py-2 text-base font-medium rounded-md transition-colors ${
                     pathname.startsWith("/noradrenaline")
                       ? "bg-purple-50 text-purple-600"
-                      : "text-gray-600 hover:text-purple-600 hover:bg-purple-50"
+                      : "text-gray-700 hover:text-purple-600 hover:bg-purple-50"
                   }`}
                   onClick={() => setMobileMenuOpen(false)}
                 >
@@ -187,7 +187,7 @@ export function Header({ title, subtitle, moduleType }: HeaderProps) {
                   className={`block px-3 py-2 text-base font-medium rounded-md transition-colors ${
                     pathname.startsWith("/sepsis")
                       ? "bg-red-50 text-red-600"
-                      : "text-gray-600 hover:text-red-600 hover:bg-red-50"
+                      : "text-gray-700 hover:text-red-600 hover:bg-red-50"
                   }`}
                   onClick={() => setMobileMenuOpen(false)}
                 >
