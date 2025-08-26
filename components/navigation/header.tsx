@@ -80,36 +80,36 @@ export function Header({ title, subtitle, moduleType }: HeaderProps) {
               )}
             </div>
 
-            {/* Center - Navigation Links (Desktop) */}
+           {/* Center - Navigation Links (Desktop) */}
             <nav className="hidden lg:flex items-center space-x-8">
               <Link
                 href="/"
-                className={`text-sm font-medium transition-colors hover:text-white ${
-                  isHomePage ? "text-white" : "text-gray-900"
+                className={`text-sm font-medium transition-colors hover:text-gray-900 ${
+                  isHomePage ? "text-white-900" : "text-gray-600"
                 }`}
               >
                 Dashboard
               </Link>
               <Link
                 href="/3zone"
-                className={`text-sm font-medium transition-colors hover:text-white ${
-                  pathname.startsWith("/3zone") ? "text-gray-900" : "text-gray-900"
+                className={`text-sm font-medium transition-colors hover:text-blue-600 ${
+                  pathname.startsWith("/3zone") ? "text-blue-600" : "text-gray-600"
                 }`}
               >
                 3Zone Training
               </Link>
               <Link
                 href="/noradrenaline"
-                className={`text-sm font-medium transition-colors hover:text-white ${
-                  pathname.startsWith("/noradrenaline") ? "text-gray-900" : "text-gray-900"
+                className={`text-sm font-medium transition-colors hover:text-purple-600 ${
+                  pathname.startsWith("/noradrenaline") ? "text-purple-600" : "text-gray-600"
                 }`}
               >
                 Noradrenaline
               </Link>
               <Link
                 href="/sepsis"
-                className={`text-sm font-medium transition-colors hover:text-white ${
-                  pathname.startsWith("/sepsis") ? "text-gray-900" : "text-gray-900"
+                className={`text-sm font-medium transition-colors hover:text-red-600 ${
+                  pathname.startsWith("/sepsis") ? "text-red-600" : "text-gray-600"
                 }`}
               >
                 Sepsis Guidelines
@@ -124,17 +124,14 @@ export function Header({ title, subtitle, moduleType }: HeaderProps) {
                 </Badge>
               )}
 
-              {/* Logout button */}
-              <Link href="https://gkfmadurai.in/">
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  className="flex items-center space-x-2 text-gray-800 hover:text-white"
-                >
-                  <LogOut className="h-4 w-4" />
-                  <span className="hidden sm:inline">GKF</span>
-                </Button>
-              </Link>
+              {!isHomePage && (
+                <Link href="/" className="lg:hidden">
+                  <Button variant="ghost" size="sm" className="flex items-center space-x-2">
+                    <Home className="h-4 w-4" />
+                    <span className="hidden sm:inline">Dashboard</span>
+                  </Button>
+                </Link>
+              )}
 
               {/* Mobile menu button */}
               <Button
@@ -200,6 +197,6 @@ export function Header({ title, subtitle, moduleType }: HeaderProps) {
           )}
         </div>
       </header>
+      {/* The bottom fixed text has been removed as requested */}
     </>
   )
-}
