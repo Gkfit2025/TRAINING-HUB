@@ -125,14 +125,14 @@ export function Header({ title, subtitle, moduleType }: HeaderProps) {
               )}
 
               {/* Logout button */}
-              <Link href="https://ichal.vercel.app/">
+              <Link href="https://gkfmadurai.in/">
                 <Button
                   variant="ghost"
                   size="sm"
                   className="flex items-center space-x-2 text-gray-800 hover:text-white"
                 >
                   <LogOut className="h-4 w-4" />
-                  <span className="hidden sm:inline">Logout</span>
+                  <span className="hidden sm:inline">GKF</span>
                 </Button>
               </Link>
 
