@@ -42,7 +42,7 @@ export function Header({ title, subtitle, moduleType }: HeaderProps) {
   return (
     <>
       {/* Header with custom background color */}
-      <header className="bg-[#6495ED] shadow-sm border-b sticky top-0 z-50">
+      <header className="bg-[#0099ff] shadow-sm border-b sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             {/* Left side - Logo and title */}
