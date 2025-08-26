@@ -41,9 +41,9 @@ export default function HomePage() {
           <div className="marquee">
             <p
               className="text-base sm:text-lg lg:text-xl font-bold py-2 px-4"
-              style={{ color: "#00004d" }}
+              style={{ color: "#003d66" }}
             >
-              ★ Gift Skin – Gift Life ★ தாய்ப்பால் தானம் செய்வீர்! குழந்தை நலன் காப்பீர்! எதிர்காலத்தை ஒளிரச் செய்ய சிறிய துளிகள்… Human Milk bank - Little drops to light the future… Donate excess breast milk and help nourish underweight infants in Mazhalai Illam.
+              Empowering Healthcare Through Smarter Training
             </p>
           </div>
         </div>
@@ -58,7 +58,7 @@ export default function HomePage() {
             <div className="flex-1 text-center lg:text-left">
               <h1
                 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 drop-shadow-lg animate-fade-in"
-                style={{ color: "#005ce6" }}
+                style={{ color: "#9900e6" }}
               >
                 Medical Training Hub
               </h1>
