@@ -31,10 +31,10 @@ export default function HomePage() {
             }
             @keyframes marquee {
               0% {
-                transform: translateX(-100%);
+                transform: translateX(100%);
               }
               100% {
-                transform: translateX(100%);
+                transform: translateX(-100%);
               }
             }
           `}</style>
@@ -48,7 +48,9 @@ export default function HomePage() {
           </div>
         </div>
 
-        <Header />
+        <div style={{ backgroundColor: "#0099ff" }} className="w-full">
+          <Header />
+        </div>
 
         <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-6 sm:gap-8 lg:gap-12">
