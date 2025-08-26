@@ -16,7 +16,7 @@ export default function HomePage() {
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "url('/grace-kennett-foundation-madurai-gkf-1.png')",
+          backgroundImage: "url('/gkfbg.png')",
         }}
       />
 
