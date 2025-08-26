@@ -2,7 +2,7 @@
 
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { Home, Menu, X, LogOut } from "lucide-react"
+import { Home, Menu, X } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 import { usePathname } from "next/navigation"
@@ -17,18 +17,18 @@ interface HeaderProps {
 const moduleConfig = {
   "3zone": {
     badge: "3Zone Training",
-    badgeClass: "bg-gray-100 text-gray-800", // Changed from white
-    color: "gray",
+    badgeClass: "bg-blue-100 text-blue-800",
+    color: "blue",
   },
   noradrenaline: {
     badge: "Noradrenaline Training",
-    badgeClass: "bg-gray-100 text-gray-800", // Changed from white
-    color: "gray",
+    badgeClass: "bg-purple-100 text-purple-800",
+    color: "purple",
   },
   sepsis: {
     badge: "Sepsis Guidelines 2024",
-    badgeClass: "bg-gray-100 text-gray-800", // Changed from white
-    color: "gray",
+    badgeClass: "bg-red-100 text-red-800",
+    color: "red",
   },
 }
 
@@ -42,7 +42,7 @@ export function Header({ title, subtitle, moduleType }: HeaderProps) {
   return (
     <>
       {/* Header with custom background color */}
-      <header className="bg-[#67C090] shadow-sm border-b sticky top-0 z-50">
+      <header className="bg-[#3D74B6] shadow-sm border-b sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             {/* Left side - Logo and title */}
@@ -69,18 +69,19 @@ export function Header({ title, subtitle, moduleType }: HeaderProps) {
                   >
                     GRACE KENNETT FOUNDATION
                   </h1>
+                  {/* Removed subtitle as instructed */}
                 </div>
               </Link>
               {/* Breadcrumb for non-home pages */}
               {!isHomePage && (
-                <div className="hidden md:flex items-center space-x-2 text-sm text-gray-800">
+                <div className="hidden md:flex items-center space-x-2 text-sm text-white-500">
                   <span>/</span>
                   <span className="text-gray-900">{title || "Training Module"}</span>
                 </div>
               )}
             </div>
 
-           {/* Center - Navigation Links (Desktop) */}
+            {/* Center - Navigation Links (Desktop) */}
             <nav className="hidden lg:flex items-center space-x-8">
               <Link
                 href="/"
@@ -200,3 +201,4 @@ export function Header({ title, subtitle, moduleType }: HeaderProps) {
       {/* The bottom fixed text has been removed as requested */}
     </>
   )
+}
