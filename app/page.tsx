@@ -29,11 +29,11 @@ export default function HomePage() {
             <div className="flex-1 text-center lg:text-left">
               <h1
                 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 drop-shadow-lg animate-fade-in"
-                style={{ color: "#0040ff" }}
+                style={{ color: "#eff542" }}
               >
                 Medical Training Hub
               </h1>
-              <p className="text-base sm:text-lg lg:text-xl text-gray/900 max-w-xl sm:max-w-2xl mb-6 sm:mb-8 drop-shadow">
+              <p className="text-base sm:text-lg lg:text-xl text-black/900 max-w-xl sm:max-w-2xl mb-6 sm:mb-8 drop-shadow">
                 Complete your required medical training modules and track your progress
               </p>
               <Link href="/modules">
