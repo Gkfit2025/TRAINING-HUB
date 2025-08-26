@@ -21,6 +21,30 @@ export default function HomePage() {
       />
 
       <div className="relative z-10">
+        {/* Marquee Caption */}
+        <div className="w-full overflow-hidden bg-white/95 backdrop-blur-sm">
+          <style jsx>{`
+            .marquee {
+              display: inline-block;
+              white-space: nowrap;
+              animation: marquee 10s linear infinite;
+            }
+            @keyframes marquee {
+              0% {
+                transform: translateX(100%);
+              }
+              100% {
+                transform: translateX(-100%);
+              }
+            }
+          `}</style>
+          <div className="marquee">
+            <p className="text-lg sm:text-xl font-semibold text-blue-600 py-2 px-4">
+              Gift Skin - Gift Life
+            </p>
+          </div>
+        </div>
+
         <Header />
 
         <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
@@ -96,27 +120,30 @@ export default function HomePage() {
           </div>
         </main>
 
-        {/* Footer with Logo and Grace Kennett Foundation Text placed outside of main */}
-         <div className="border-t border-gray-200 p-4 text-center text-sm text-gray-600 bg-gray-50">
+        {/* Footer with Logo and Grace Kennett Foundation Text */}
+        <div className="border-t border-gray-200 p-4 text-center text-sm text-gray-600 bg-gray-50">
           <div className="flex items-center justify-center mb-1">
             <p className="h-4 w-4 mr-1 text-gray-500" />
-            <span>For suggestions WhatsApp{" "} 
-             <a
+            <span>
+              For suggestions WhatsApp{" "}
+              <a
                 href="https://gkfmadurai.in/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-blue-600 hover:text-blue-800 underline"
               >
-                 GKF-IT Team
-              </a>{" "} at +91 9842194442</span>
+                GKF-IT Team
+              </a>{" "}
+              at +91 9842194442
+            </span>
           </div>
           <div className="flex items-center justify-center">
-           <img
-            src="/butterfly-Photoroom.png"
-            alt="Grace Kennett Foundation Logo"
-            className="h-10 w-10 sm:h-12 sm:w-12 object-contain"
-            onError={(e) => (e.currentTarget.src = "/butterfly-Photoroom.png")} // Fallback if logo11.png fails
-          />
+            <img
+              src="/butterfly-Photoroom.png"
+              alt="Grace Kennett Foundation Logo"
+              className="h-10 w-10 sm:h-12 sm:w-12 object-contain"
+              onError={(e) => (e.currentTarget.src = "/butterfly-Photoroom.png")} // Fallback if logo fails
+            />
             <span>
               <a
                 href="https://creativecommons.org/licenses/by/4.0/"
@@ -124,20 +151,18 @@ export default function HomePage() {
                 rel="noopener noreferrer"
                 className="text-blue-600 hover:text-blue-800 underline"
               >
-                 License 4.0
+                License 4.0
               </a>{" "}
               • Grace Kennett Foundation Hospital, 8, Kennett Road Madurai, Tamil Nadu, India
             </span>
-              </div>
-              <div className="flex items-center justify-center mb-1">
-            
-             <p className="text-xs sm:text-sm font-medium text-gray-500">  <span> &copy; {new Date().getFullYear()} Grace Kennett Foundation Training Modules. All rights reserved.</span></p>
-     
+          </div>
+          <div className="flex items-center justify-center mb-1">
+            <p className="text-xs sm:text-sm font-medium text-gray-500">
+              <span>&copy; {new Date().getFullYear()} Grace Kennett Foundation Training Modules. All rights reserved.</span>
+            </p>
           </div>
         </div>
-       
       </div>
-    
     </div>
   )
 }
