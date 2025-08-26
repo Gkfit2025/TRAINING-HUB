@@ -125,7 +125,7 @@ export function Header({ title, subtitle, moduleType }: HeaderProps) {
               )}
 
               {/* Logout button */}
-              <Link href="/api/auth/logout">
+              <Link href="https://ichal.vercel.app/">
                 <Button
                   variant="ghost"
                   size="sm"
