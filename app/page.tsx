@@ -27,7 +27,7 @@ export default function HomePage() {
             .marquee {
               display: inline-block;
               white-space: nowrap;
-              animation: marquee 10s linear infinite;
+              animation: marquee 15s linear infinite;
             }
             @keyframes marquee {
               0% {
@@ -39,8 +39,11 @@ export default function HomePage() {
             }
           `}</style>
           <div className="marquee">
-            <p className="text-lg sm:text-xl font-semibold text-blue-600 py-2 px-4">
-              Gift Skin - Gift Life
+            <p
+              className="text-base sm:text-lg lg:text-xl font-bold py-2 px-4"
+              style={{ color: "#0000e6" }}
+            >
+              Gift Skin – Gift Life தாய்ப்பால் தானம் செய்வீர்! குழந்தை நலன் காப்பீர்! எதிர்காலத்தை ஒளிரச் செய்ய சிறிய துளிகள்… Human Milk bank - Little drops to light the future… Donate excess breast milk and help nourish underweight infants in Mazhalai Illam.
             </p>
           </div>
         </div>
