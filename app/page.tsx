@@ -1,5 +1,6 @@
 "use client"
 
+import { useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -22,18 +23,55 @@ import {
 import Link from "next/link"
 
 export default function HomePage() {
+  // Generate floating particles on mount
+  useEffect(() => {
+    for (let i = 0; i < 25; i++) {
+      let particle = document.createElement("div")
+      particle.className = "particle"
+      particle.style.left = Math.random() * 100 + "vw"
+      particle.style.animationDuration = 5 + Math.random() * 10 + "s"
+      particle.style.animationDelay = Math.random() * 10 + "s"
+      document.body.appendChild(particle)
+    }
+  }, [])
+
   return (
     <div
       className="min-h-screen bg-gradient-to-b from-emerald-50 to-white relative"
       style={{
-        backgroundImage: "url('/medical-background.png')",
+        backgroundImage: "url('https://images.unsplash.com/photo-1588776814546-ec72a9a62d36?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80')",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
+        backgroundAttachment: "fixed",
       }}
     >
       {/* Overlay for readability */}
-      <div className="absolute inset-0 bg-white/60 pointer-events-none z-0"></div>
+      <div className="absolute inset-0 bg-black/60 pointer-events-none z-0"></div>
+
+      {/* Particle styles */}
+      <style jsx>{`
+        .particle {
+          position: absolute;
+          width: 8px;
+          height: 8px;
+          background: #00e0ff;
+          border-radius: 50%;
+          opacity: 0.7;
+          animation: floatUp 10s linear infinite;
+          z-index: 1;
+        }
+        @keyframes floatUp {
+          0% {
+            transform: translateY(100vh) scale(0.5);
+            opacity: 0.6;
+          }
+          100% {
+            transform: translateY(-10vh) scale(1);
+            opacity: 0;
+          }
+        }
+      `}</style>
 
       <div className="relative z-10">
         {/* Header */}
