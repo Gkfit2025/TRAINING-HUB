@@ -26,7 +26,7 @@ export default function HomePage() {
     <div
       className="min-h-screen bg-gradient-to-b from-emerald-50 to-white relative"
       style={{
-        backgroundImage: "url('/hospital.png')",
+        backgroundImage: "url('/hospital1.png')",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
