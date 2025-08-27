@@ -1,17 +1,23 @@
 {
-  "name": "medical-training-platform",
+  "name": "hospital-training-platform",
   "version": "1.0.0",
   "private": true,
-  "description": "Comprehensive medical training platform with modular assessments",
+  "description": "Comprehensive hospital training modules platform for Grace Kennett Foundation - 40 bedded hospital in India",
   "keywords": [
-    "medical",
-    "training",
-    "assessment",
-    "healthcare",
-    "education"
+    "hospital",
+    "medical-training",
+    "healthcare-education",
+    "staff-training",
+    "india",
+    "grace-kennett-foundation"
   ],
+  "homepage": "https://hospital-training-platform.vercel.app",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-org/hospital-training-platform"
+  },
   "license": "MIT",
-  "author": "Medical Training Team",
+  "author": "Grace Kennett Foundation IT Team",
   "scripts": {
     "build": "next build",
     "dev": "next dev",

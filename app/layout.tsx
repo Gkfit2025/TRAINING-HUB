@@ -6,7 +6,7 @@ import "./globals.css"
 import { ProgressProvider } from "@/lib/progress-context"
 
 export const metadata: Metadata = {
-  title: "Medical Training Hub of GKF",
+  title: "Medical Training Platform",
   description: "Hospital Staff Education Program - Comprehensive medical training modules",
   generator: "v0.app",
 }
