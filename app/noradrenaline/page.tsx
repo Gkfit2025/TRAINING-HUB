@@ -200,7 +200,7 @@ export default function NoradrenalineTraining() {
               <div className="grid md:grid-cols-2 gap-6 items-center">
                 <div className="relative">
                   <img
-                    src="/noradrenaline-vial.png"
+                    src="/noradrenaline.png"
                     alt="Noradrenaline medication vial and preparation"
                     className="w-full h-64 object-cover rounded-lg shadow-lg"
                   />
