@@ -6,6 +6,7 @@ import { Home, Menu, X } from "lucide-react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { useState } from "react"
+import Image from "next/image"
 
 interface HeaderProps {
   title?: string
@@ -45,9 +46,15 @@ export function Header({ title, subtitle, moduleType }: HeaderProps) {
           {/* Left side - Logo and title */}
           <div className="flex items-center space-x-4">
             <Link href="/" className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-red-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">M</span>
-              </div>
+              {/* Logo image added here */}
+              <Image
+                src="/logo12.png"
+                alt="Logo"
+                width={40}
+                height={40}
+                className="rounded-lg"
+                priority
+              />
               {isHomePage ? (
                 <div>
                   <h1 className="text-xl font-bold text-gray-900">Medical Training Platform</h1>
