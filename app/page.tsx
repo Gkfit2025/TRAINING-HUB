@@ -33,6 +33,11 @@ export default function HomePage() {
       particle.style.animationDelay = Math.random() * 10 + "s"
       document.body.appendChild(particle)
     }
+    // Cleanup particles on unmount
+    return () => {
+      const particles = document.querySelectorAll(".particle")
+      particles.forEach(particle => particle.remove())
+    }
   }, [])
 
   return (
@@ -137,7 +142,7 @@ export default function HomePage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {/* 3Zone Training */}
+            {/* 3Zone Deep Clean Assessment */}
             <Card className="hover:shadow-lg transition-shadow border-l-4 border-l-blue-500">
               <CardHeader>
                 <div className="flex items-center justify-between">
@@ -166,7 +171,7 @@ export default function HomePage() {
               </CardContent>
             </Card>
 
-            {/* Noradrenaline Training */}
+            {/* Noradrenaline Administration */}
             <Card className="hover:shadow-lg transition-shadow border-l-4 border-l-purple-500">
               <CardHeader>
                 <div className="flex items-center justify-between">
@@ -195,7 +200,7 @@ export default function HomePage() {
               </CardContent>
             </Card>
 
-            {/* Sepsis Guidelines */}
+            {/* Sepsis Guidelines 2024 */}
             <Card className="hover:shadow-lg transition-shadow border-l-4 border-l-red-500">
               <CardHeader>
                 <div className="flex items-center justify-between">
@@ -222,7 +227,7 @@ export default function HomePage() {
               </CardContent>
             </Card>
 
-            {/* Burns Management */}
+            {/* Burns Fluid Management */}
             <Card className="hover:shadow-lg transition-shadow border-l-4 border-l-orange-500">
               <CardHeader>
                 <div className="flex items-center justify-between">
@@ -323,7 +328,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Learning Pathways */}
+        {/* Structured Learning Pathways */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Structured Learning Pathways</h2>
