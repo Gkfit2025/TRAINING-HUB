@@ -21,6 +21,7 @@ import {
   Activity,
 } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image" // Import next/image for logo
 
 export default function HomePage() {
   // Generate floating particles on mount
@@ -42,18 +43,11 @@ export default function HomePage() {
 
   return (
     <div
-      className="min-h-screen bg-gradient-to-b from-emerald-50 to-white relative"
+      className="min-h-screen relative"
       style={{
-        backgroundImage: "url('https://images.unsplash.com/photo-1588776814546-ec72a9a62d36?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80')",
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-        backgroundPosition: "center",
-        backgroundAttachment: "fixed",
+        backgroundColor: "#fff", // Changed homepage background to white
       }}
     >
-      {/* Overlay for readability */}
-      <div className="absolute inset-0 bg-black/60 pointer-events-none z-0"></div>
-
       {/* Particle styles */}
       <style jsx>{`
         .particle {
@@ -84,7 +78,15 @@ export default function HomePage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-3">
-                <Stethoscope className="h-8 w-8" />
+                {/* Logo added here */}
+                <Image
+                  src="/logo12.png"
+                  alt="Grace Kennett Foundation Logo"
+                  width={40}
+                  height={40}
+                  className="h-10 w-10 rounded-full object-cover"
+                  priority
+                />
                 <span className="text-xl font-bold">Grace Kennett Foundation</span>
               </div>
               <nav className="hidden md:flex space-x-6">
