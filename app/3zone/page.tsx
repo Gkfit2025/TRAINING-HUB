@@ -362,7 +362,7 @@ export default function ThreeZoneTraining() {
                 </div>
                 <div className="relative">
                   <img
-                    src="/medical-equipment-cleaning.png"
+                    src="/3zonepic.png"
                     alt="Medical equipment cleaning with color-coded supplies"
                     className="w-full h-64 object-cover rounded-lg shadow-lg"
                   />
