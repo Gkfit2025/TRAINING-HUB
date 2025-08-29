@@ -62,16 +62,16 @@ export function Header({ title, subtitle, moduleType }: HeaderProps) {
             <Link href="/" className="flex items-center space-x-3">
               {isHomePage ? (
                 <div>
-                  <h1 className="text-xl font-bold text-white">
+                  <h1 className="text-xl font-bold" style={{ color: "#FF5C00" }}>
                     Medical Training Platform
                   </h1>
-                  <p className="text-sm hidden sm:block text-gray-300">
+                  <p className="text-sm hidden sm:block" style={{ color: "#FF5C00" }}>
                     Hospital Staff Education Program
                   </p>
                 </div>
               ) : (
                 <div className="hidden sm:block">
-                  <h1 className="text-lg font-semibold text-white">
+                  <h1 className="text-lg font-semibold" style={{ color: "#FF5C00" }}>
                     Medical Training Platform
                   </h1>
                 </div>
@@ -80,9 +80,9 @@ export function Header({ title, subtitle, moduleType }: HeaderProps) {
 
             {/* Breadcrumb for non-home pages */}
             {!isHomePage && (
-              <div className="hidden md:flex items-center space-x-2 text-sm text-white">
+              <div className="hidden md:flex items-center space-x-2 text-sm" style={{ color: "#FF5C00" }}>
                 <span>/</span>
-                <span className="text-white">
+                <span>
                   {title || "Training Module"}
                 </span>
               </div>
@@ -94,7 +94,7 @@ export function Header({ title, subtitle, moduleType }: HeaderProps) {
             <Link
               href="/"
               className={`text-sm font-medium transition-colors ${
-                isHomePage ? "text-white" : "text-gray-300 hover:text-white"
+                isHomePage ? "text-[#FF5C00]" : "text-[#FF5C00] hover:text-[#FF5C00]"
               }`}
             >
               Dashboard
@@ -102,7 +102,7 @@ export function Header({ title, subtitle, moduleType }: HeaderProps) {
             <Link
               href="/3zone"
               className={`text-sm font-medium transition-colors ${
-                pathname.startsWith("/3zone") ? "text-white" : "text-gray-300 hover:text-white"
+                pathname.startsWith("/3zone") ? "text-[#FF5C00]" : "text-[#FF5C00] hover:text-[#FF5C00]"
               }`}
             >
               3Zone Training
@@ -110,7 +110,7 @@ export function Header({ title, subtitle, moduleType }: HeaderProps) {
             <Link
               href="/noradrenaline"
               className={`text-sm font-medium transition-colors ${
-                pathname.startsWith("/noradrenaline") ? "text-white" : "text-gray-300 hover:text-white"
+                pathname.startsWith("/noradrenaline") ? "text-[#FF5C00]" : "text-[#FF5C00] hover:text-[#FF5C00]"
               }`}
             >
               Noradrenaline
@@ -118,7 +118,7 @@ export function Header({ title, subtitle, moduleType }: HeaderProps) {
             <Link
               href="/sepsis"
               className={`text-sm font-medium transition-colors ${
-                pathname.startsWith("/sepsis") ? "text-white" : "text-gray-300 hover:text-white"
+                pathname.startsWith("/sepsis") ? "text-[#FF5C00]" : "text-[#FF5C00] hover:text-[#FF5C00]"
               }`}
             >
               Sepsis Guidelines
@@ -135,7 +135,7 @@ export function Header({ title, subtitle, moduleType }: HeaderProps) {
 
             {!isHomePage && (
               <Link href="/" className="lg:hidden">
-                <Button variant="ghost" size="sm" className="flex items-center space-x-2 text-white hover:bg-[#0d3c6c]">
+                <Button variant="ghost" size="sm" className="flex items-center space-x-2" style={{ color: "#FF5C00", hover: { backgroundColor: "#0d3c6c" }}}>
                   <Home className="h-4 w-4" />
                   <span className="hidden sm:inline">Dashboard</span>
                 </Button>
@@ -143,7 +143,7 @@ export function Header({ title, subtitle, moduleType }: HeaderProps) {
             )}
 
             {/* Mobile menu button */}
-            <Button variant="ghost" size="sm" className="lg:hidden text-white hover:bg-[#0d3c6c]" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+            <Button variant="ghost" size="sm" className="lg:hidden" style={{ color: "#FF5C00", hover: { backgroundColor: "#0d3c6c" }}} onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
               {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             </Button>
           </div>
@@ -156,7 +156,7 @@ export function Header({ title, subtitle, moduleType }: HeaderProps) {
               <Link
                 href="/"
                 className={`block px-3 py-2 text-base font-medium rounded-md transition-colors ${
-                  isHomePage ? "bg-[#0d3c6c] text-white" : "text-gray-300 hover:text-white hover:bg-[#0d3c6c]"
+                  isHomePage ? "bg-[#0d3c6c] text-[#FF5C00]" : "text-[#FF5C00] hover:text-[#FF5C00] hover:bg-[#0d3c6c]"
                 }`}
                 onClick={() => setMobileMenuOpen(false)}
               >
@@ -166,8 +166,8 @@ export function Header({ title, subtitle, moduleType }: HeaderProps) {
                 href="/3zone"
                 className={`block px-3 py-2 text-base font-medium rounded-md transition-colors ${
                   pathname.startsWith("/3zone")
-                    ? "bg-[#0d3c6c] text-white"
-                    : "text-gray-300 hover:text-white hover:bg-[#0d3c6c]"
+                    ? "bg-[#0d3c6c] text-[#FF5C00]"
+                    : "text-[#FF5C00] hover:text-[#FF5C00] hover:bg-[#0d3c6c]"
                 }`}
                 onClick={() => setMobileMenuOpen(false)}
               >
@@ -177,8 +177,8 @@ export function Header({ title, subtitle, moduleType }: HeaderProps) {
                 href="/noradrenaline"
                 className={`block px-3 py-2 text-base font-medium rounded-md transition-colors ${
                   pathname.startsWith("/noradrenaline")
-                    ? "bg-[#0d3c6c] text-white"
-                    : "text-gray-300 hover:text-white hover:bg-[#0d3c6c]"
+                    ? "bg-[#0d3c6c] text-[#FF5C00]"
+                    : "text-[#FF5C00] hover:text-[#FF5C00] hover:bg-[#0d3c6c]"
                 }`}
                 onClick={() => setMobileMenuOpen(false)}
               >
@@ -188,8 +188,8 @@ export function Header({ title, subtitle, moduleType }: HeaderProps) {
                 href="/sepsis"
                 className={`block px-3 py-2 text-base font-medium rounded-md transition-colors ${
                   pathname.startsWith("/sepsis")
-                    ? "bg-[#0d3c6c] text-white"
-                    : "text-gray-300 hover:text-white hover:bg-[#0d3c6c]"
+                    ? "bg-[#0d3c6c] text-[#FF5C00]"
+                    : "text-[#FF5C00] hover:text-[#FF5C00] hover:bg-[#0d3c6c]"
                 }`}
                 onClick={() => setMobileMenuOpen(false)}
               >
