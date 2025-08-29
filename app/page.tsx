@@ -407,7 +407,7 @@ export default function HomePage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <div className="text-center">
               <div className="flex items-center justify-center mb-4">
-                <Stethoscope className="h-8 w-8 text-emerald-600 mr-3" />
+                <Butterfly className="h-8 w-8 text-emerald-600 mr-3" />
                 <span className="text-xl font-bold text-gray-900">Grace Kennett Foundation</span>
               </div>
               <p className="text-gray-600 mb-4">For suggestions WhatsApp GKF-IT Team at +91 9842194442</p>
