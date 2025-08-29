@@ -90,16 +90,16 @@ export default function HomePage() {
                 <span className="text-xl font-bold">Grace Kennett Foundation</span>
               </div>
               <nav className="hidden md:flex space-x-6">
-                <a href="#" className="hover:text-emerald-200 transition-colors">
-                  Dashboard
-                </a>
-                <a href="#" className="hover:text-emerald-200 transition-colors">
-                  My Progress
-                </a>
-                <a href="#" className="hover:text-emerald-200 transition-colors">
-                  Certificates
-                </a>
-              </nav>
+  <a href="#" className="hover:text-[#FF5C00] transition-colors">
+    Dashboard
+  </a>
+  <a href="#" className="hover:text-[#FF5C00] transition-colors">
+    My Progress
+  </a>
+  <a href="#" className="hover:text-[#FF5C00] transition-colors">
+    Certificates
+  </a>
+</nav>
             </div>
           </div>
         </header>
