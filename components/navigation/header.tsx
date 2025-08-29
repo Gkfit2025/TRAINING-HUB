@@ -49,7 +49,7 @@ export function Header({ title, subtitle, moduleType }: HeaderProps) {
               {/* Logo image added here */}
               <Image
                 src="/logo12.png"
-                alt="Logo"
+                alt="Logo12"
                 width={40}
                 height={40}
                 className="rounded-lg"
