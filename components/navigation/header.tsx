@@ -40,7 +40,7 @@ export function Header({ title, subtitle, moduleType }: HeaderProps) {
   const config = moduleType ? moduleConfig[moduleType] : null
 
   return (
-    <header className="shadow-sm border-b sticky top-0 z-50" style={{ backgroundColor: "#0B3559" }}>
+    <header className="shadow-sm border-b sticky top-0 z-50" style={{ backgroundColor: "#000000" }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         {/* Logo fixed in the left side corner */}
         <div className="absolute left-0 top-0 h-16 flex items-center pl-2">
