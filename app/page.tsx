@@ -78,13 +78,13 @@ export default function HomePage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-3">
-                {/* Logo added here */}
+                {/* Logo updated to remove rounded shape */}
                 <Image
                   src="/logo12.png"
                   alt="Grace Kennett Foundation Logo"
                   width={40}
                   height={40}
-                  className="h-10 w-10 rounded-full object-cover"
+                  className="h-10 w-10 object-contain"
                   priority
                 />
                 <span className="text-xl font-bold">Grace Kennett Foundation</span>
