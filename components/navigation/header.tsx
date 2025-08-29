@@ -41,20 +41,25 @@ export function Header({ title, subtitle, moduleType }: HeaderProps) {
 
   return (
     <header className="bg-white shadow-sm border-b sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          {/* Left side - Logo and title */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        {/* Logo fixed in the left side corner */}
+        <div className="absolute left-0 top-0 h-16 flex items-center pl-2">
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/logo12.png"
+              alt="Logo"
+              width={40}
+              height={40}
+              className="rounded-lg"
+              priority
+            />
+          </Link>
+        </div>
+        <div className="flex items-center justify-between h-16 pl-16">
+          {/* Left side - Title and breadcrumb (logo is now handled above) */}
           <div className="flex items-center space-x-4">
             <Link href="/" className="flex items-center space-x-3">
-              {/* Logo image added here */}
-              <Image
-                src="/logo12.png"
-                alt="Logo"
-                width={40}
-                height={40}
-                className="rounded-lg"
-                priority
-              />
+              {/* Hide logo here, as it's now fixed in the corner */}
               {isHomePage ? (
                 <div>
                   <h1 className="text-xl font-bold text-gray-900">Medical Training Platform</h1>
