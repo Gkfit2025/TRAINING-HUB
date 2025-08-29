@@ -135,7 +135,7 @@ export function Header({ title, subtitle, moduleType }: HeaderProps) {
 
             {!isHomePage && (
               <Link href="/" className="lg:hidden">
-                <Button variant="ghost" size="sm" className="flex items-center space-x-2 text-white hover:bg-blue-800">
+                <Button variant="ghost" size="sm" className="flex items-center space-x-2 text-white hover:bg-[#0d3c6c]">
                   <Home className="h-4 w-4" />
                   <span className="hidden sm:inline">Dashboard</span>
                 </Button>
@@ -143,7 +143,7 @@ export function Header({ title, subtitle, moduleType }: HeaderProps) {
             )}
 
             {/* Mobile menu button */}
-            <Button variant="ghost" size="sm" className="lg:hidden text-white hover:bg-blue-800" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+            <Button variant="ghost" size="sm" className="lg:hidden text-white hover:bg-[#0d3c6c]" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
               {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             </Button>
           </div>
@@ -151,12 +151,12 @@ export function Header({ title, subtitle, moduleType }: HeaderProps) {
 
         {/* Mobile Navigation Menu */}
         {mobileMenuOpen && (
-          <div className="lg:hidden border-t border-blue-800" style={{ backgroundColor: "#0B3559" }}>
+          <div className="lg:hidden border-t border-[#0d3c6c]" style={{ backgroundColor: "#0B3559" }}>
             <div className="px-2 pt-2 pb-3 space-y-1">
               <Link
                 href="/"
                 className={`block px-3 py-2 text-base font-medium rounded-md transition-colors ${
-                  isHomePage ? "bg-blue-800 text-white" : "text-gray-300 hover:text-white hover:bg-blue-800"
+                  isHomePage ? "bg-[#0d3c6c] text-white" : "text-gray-300 hover:text-white hover:bg-[#0d3c6c]"
                 }`}
                 onClick={() => setMobileMenuOpen(false)}
               >
@@ -166,8 +166,8 @@ export function Header({ title, subtitle, moduleType }: HeaderProps) {
                 href="/3zone"
                 className={`block px-3 py-2 text-base font-medium rounded-md transition-colors ${
                   pathname.startsWith("/3zone")
-                    ? "bg-blue-800 text-white"
-                    : "text-gray-300 hover:text-white hover:bg-blue-800"
+                    ? "bg-[#0d3c6c] text-white"
+                    : "text-gray-300 hover:text-white hover:bg-[#0d3c6c]"
                 }`}
                 onClick={() => setMobileMenuOpen(false)}
               >
@@ -177,8 +177,8 @@ export function Header({ title, subtitle, moduleType }: HeaderProps) {
                 href="/noradrenaline"
                 className={`block px-3 py-2 text-base font-medium rounded-md transition-colors ${
                   pathname.startsWith("/noradrenaline")
-                    ? "bg-blue-800 text-white"
-                    : "text-gray-300 hover:text-white hover:bg-blue-800"
+                    ? "bg-[#0d3c6c] text-white"
+                    : "text-gray-300 hover:text-white hover:bg-[#0d3c6c]"
                 }`}
                 onClick={() => setMobileMenuOpen(false)}
               >
@@ -188,8 +188,8 @@ export function Header({ title, subtitle, moduleType }: HeaderProps) {
                 href="/sepsis"
                 className={`block px-3 py-2 text-base font-medium rounded-md transition-colors ${
                   pathname.startsWith("/sepsis")
-                    ? "bg-blue-800 text-white"
-                    : "text-gray-300 hover:text-white hover:bg-blue-800"
+                    ? "bg-[#0d3c6c] text-white"
+                    : "text-gray-300 hover:text-white hover:bg-[#0d3c6c]"
                 }`}
                 onClick={() => setMobileMenuOpen(false)}
               >
