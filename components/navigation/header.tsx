@@ -45,12 +45,15 @@ export function Header({ title, subtitle, moduleType }: HeaderProps) {
         {/* Logo fixed in the left side corner */}
         <div className="absolute left-0 top-0 h-16 flex items-center pl-2">
           <Link href="/" className="flex items-center">
+            {/* Remove any rounded styling, keep original aspect */}
             <Image
               src="/logo12.png"
               alt="Logo"
               width={40}
               height={40}
               priority
+              className="" // No rounded, border, or overflow classes
+              style={{ borderRadius: "0px" }} // Explicitly no border-radius
             />
           </Link>
         </div>
