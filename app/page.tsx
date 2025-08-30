@@ -409,7 +409,7 @@ export default function HomePage() {
                 <span>License 4.0 • Grace Kennett Foundation Hospital, 8, Kennett Road Madurai, Tamil Nadu, India</span>
               </div>
               <p className="text-sm text-gray-500 mt-2">
-                © 2025 Grace Kennett Foundation Training Modules. All rights reserved.
+                © 2025 Grace Kennett Foundation. All rights reserved.
               </p>
             </div>
           </div>
