@@ -60,30 +60,24 @@ export function Header({ title, subtitle, moduleType }: HeaderProps) {
           {/* Left side - Title and breadcrumb */}
           <div className="flex items-center space-x-4">
             <Link href="/" className="flex items-center space-x-3">
-   {isHomePage ? (
-  <div>
-    <h1 className="text-3xl font-bold text-[#F59D29] hover:text-white transition-colors">
-  Grace Kennett Foundation
-</h1>
-    <p className="text-sm hidden sm:block text-[#FF5C00] hover:text-white transition-colors">
-      Hospital Staff Education Program
-    </p>
-  </div>
-) : (
-  <div className="hidden sm:block">
-    <h1 className="text-lg font-semibold text-[#F59D29] hover:text-white transition-colors">
-      Grace Kennett Foundation
-    </h1>
-  </div>
-)}
+              {isHomePage ? (
+                <div>
+                  <h1 className="text-3xl font-bold text-[#F59D29] hover:text-white transition-colors">
+                    Grace Kennett Foundation
+                  </h1>
+                  <p className="text-sm hidden sm:block text-[#FF5C00] hover:text-white transition-colors">
+                    Hospital Staff Education Program
+                  </p>
+                </div>
               ) : (
                 <div className="hidden sm:block">
-                  <h1 className="text-lg font-semibold" style={{ color: "#FF5C00" }}>
-                    Medical Training Platform
+                  <h1 className="text-lg font-semibold text-[#F59D29] hover:text-white transition-colors">
+                    Grace Kennett Foundation
                   </h1>
                 </div>
               )}
             </Link>
+          </div>
 
           {/* Center - Navigation Links (Desktop) */}
           <nav className="hidden lg:flex items-center space-x-8">
@@ -131,7 +125,7 @@ export function Header({ title, subtitle, moduleType }: HeaderProps) {
 
             {!isHomePage && (
               <Link href="/" className="lg:hidden">
-                <Button variant="ghost" size="sm" className="flex items-center space-x-2" style={{ color: "#FF5C00", hover: { backgroundColor: "#0d3c6c" }}}>
+                <Button variant="ghost" size="sm" className="flex items-center space-x-2" style={{ color: "#FF5C00" }}>
                   <Home className="h-4 w-4" />
                   <span className="hidden sm:inline">Dashboard</span>
                 </Button>
@@ -139,7 +133,7 @@ export function Header({ title, subtitle, moduleType }: HeaderProps) {
             )}
 
             {/* Mobile menu button */}
-            <Button variant="ghost" size="sm" className="lg:hidden" style={{ color: "#FF5C00", hover: { backgroundColor: "#0d3c6c" }}} onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+            <Button variant="ghost" size="sm" className="lg:hidden" style={{ color: "#FF5C00" }} onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
               {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             </Button>
           </div>
