@@ -61,14 +61,20 @@ export function Header({ title, subtitle, moduleType }: HeaderProps) {
           <div className="flex items-center space-x-4">
             <Link href="/" className="flex items-center space-x-3">
               {isHomePage ? (
-                <div>
-                  <h1 className="text-xl font-bold" style={{ color: "#FF5C00" }}>
-                    Medical Training Platform
-                  </h1>
-                  <p className="text-sm hidden sm:block" style={{ color: "#FF5C00" }}>
-                    Hospital Staff Education Program
-                  </p>
-                </div>
+               <div>
+  <h1 className="text-xl font-bold text-[#FF5C00] hover:text-white transition-colors">
+    Medical Training Platform
+  </h1>
+  <p className="text-sm hidden sm:block text-[#FF5C00] hover:text-white transition-colors">
+    Hospital Staff Education Program
+  </p>
+</div>
+) : (
+<div className="hidden sm:block">
+  <h1 className="text-lg font-semibold text-[#FF5C00] hover:text-white transition-colors">
+    Medical Training Platform
+  </h1>
+</div>
               ) : (
                 <div className="hidden sm:block">
                   <h1 className="text-lg font-semibold" style={{ color: "#FF5C00" }}>
