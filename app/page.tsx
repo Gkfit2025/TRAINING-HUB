@@ -250,7 +250,7 @@ export default function HomePage() {
                     Medical Staff
                   </span>
                 </div>
-                <Link href="https://v0-training-hub.vercel.app/sepsis">
+                <Link href="https://v0-training-hub.vercel.app/3zone">
                   <Button className="w-full bg-red-600 hover:bg-red-700">Start Training</Button>
                 </Link>
               </CardContent>
@@ -429,24 +429,24 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Enhanced Footer */}
-        <footer className="border-t" style={{ backgroundColor: "#0B3559" }}>
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        {/* Enhanced Footer with bigger size and #F2620A color */}
+        <footer className="border-t py-16" style={{ backgroundColor: "#F2620A" }}>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
-              <div className="flex items-center justify-center mb-4">
-                <img src="logo12.png" alt="Grace Kennett Foundation Logo" className="h-10 w-10 mr-3" />
-                <span className="text-xl font-bold" style={{ color: "#FF5C00" }}>
+              <div className="flex items-center justify-center mb-6">
+                <img src="logo12.png" alt="Grace Kennett Foundation Logo" className="h-12 w-12 mr-3" />
+                <span className="text-2xl font-bold text-white">
                   Grace Kennett Foundation
                 </span>
               </div>
-              <p className="mb-4" style={{ color: "#81F529" }}>
+              <p className="mb-6 text-lg text-white">
                 For suggestions WhatsApp GKF-IT Team at +91 9842194442
               </p>
-              <div className="flex items-center justify-center space-x-2 text-sm mb-2" style={{ color: "#F59D29" }}>
-                <img src="logo12.png" alt="Grace Kennett Foundation Logo" className="h-4 w-4" />
+              <div className="flex items-center justify-center space-x-2 text-base mb-4 text-white">
+                <img src="logo12.png" alt="Grace Kennett Foundation Logo" className="h-5 w-5" />
                 <span>License 4.0 • Grace Kennett Foundation Hospital, 8, Kennett Road Madurai, Tamil Nadu, India</span>
               </div>
-              <p className="text-sm" style={{ color: "#81F529" }}>
+              <p className="text-sm text-white opacity-90">
                 © 2025 Grace Kennett Foundation. All rights reserved.
               </p>
             </div>
