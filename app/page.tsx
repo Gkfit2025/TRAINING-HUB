@@ -21,10 +21,9 @@ import {
   Activity,
 } from "lucide-react"
 import Link from "next/link"
-import Image from "next/image" // Import next/image for logo
+import Image from "next/image"
 
 export default function HomePage() {
-  // Generate floating particles on mount
   useEffect(() => {
     for (let i = 0; i < 25; i++) {
       let particle = document.createElement("div")
@@ -34,7 +33,7 @@ export default function HomePage() {
       particle.style.animationDelay = Math.random() * 10 + "s"
       document.body.appendChild(particle)
     }
-    // Cleanup particles on unmount
+    
     return () => {
       const particles = document.querySelectorAll(".particle")
       particles.forEach(particle => particle.remove())
@@ -42,13 +41,7 @@ export default function HomePage() {
   }, [])
 
   return (
-    <div
-      className="min-h-screen relative"
-      style={{
-        backgroundColor: "#fff", // Changed homepage background to white
-      }}
-    >
-      {/* Particle styles */}
+    <div className="min-h-screen relative" style={{ backgroundColor: "#fff" }}>
       <style jsx>{`
         .particle {
           position: absolute;
@@ -73,12 +66,11 @@ export default function HomePage() {
       `}</style>
 
       <div className="relative z-10">
-        {/* Header */}
-       <header className="bg-black text-white shadow-lg">
+        {/* Header with updated color */}
+        <header className="bg-black text-white shadow-lg">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-3">
-                {/* Logo updated to remove rounded shape */}
                 <Image
                   src="/logo12.png"
                   alt="Grace Kennett Foundation Logo"
@@ -87,19 +79,21 @@ export default function HomePage() {
                   className="h-10 w-10 object-contain"
                   priority
                 />
-                <span className="text-xl font-bold">Grace Kennett Foundation</span>
+                <span className="text-xl font-bold" style={{ color: "#FF5C00" }}>
+                  Grace Kennett Foundation
+                </span>
               </div>
               <nav className="hidden md:flex space-x-6">
-  <a href="#" className="hover:text-[#FF5C00] transition-colors">
-    Dashboard
-  </a>
-  <a href="#" className="hover:text-[#FF5C00] transition-colors">
-    My Progress
-  </a>
-  <a href="#" className="hover:text-[#FF5C00] transition-colors">
-    Certificates
-  </a>
-</nav>
+                <a href="#" className="hover:text-[#FF5C00] transition-colors">
+                  Dashboard
+                </a>
+                <a href="#" className="hover:text-[#FF5C00] transition-colors">
+                  My Progress
+                </a>
+                <a href="#" className="hover:text-[#FF5C00] transition-colors">
+                  Certificates
+                </a>
+              </nav>
             </div>
           </div>
         </header>
@@ -111,9 +105,9 @@ export default function HomePage() {
               GKF Medical Training Platform
             </Badge>
           </div>
-         <h1 className="text-5xl font-bold mb-6" style={{ color: "#81F529" }}>
-  Empowering Healthcare Through <span style={{ color: "#F59D29" }}>Smarter Training</span>
-</h1>
+          <h1 className="text-5xl font-bold mb-6" style={{ color: "#81F529" }}>
+            Empowering Healthcare Through <span style={{ color: "#F59D29" }}>Smarter Training</span>
+          </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
             Experience comprehensive medical training through interactive modules, assessments, and real-world scenarios
             designed for healthcare excellence.
