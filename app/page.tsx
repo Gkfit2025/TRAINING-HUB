@@ -63,6 +63,30 @@ export default function HomePage() {
             opacity: 0;
           }
         }
+        
+        .badge-animation {
+          animation: fadeIn 1s ease-out, gentlePulse 3s ease-in-out infinite;
+        }
+        
+        @keyframes fadeIn {
+          0% {
+            opacity: 0;
+            transform: translateY(-10px);
+          }
+          100% {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        
+        @keyframes gentlePulse {
+          0%, 100% {
+            transform: scale(1);
+          }
+          50% {
+            transform: scale(1.05);
+          }
+        }
       `}</style>
 
       <div className="relative z-10">
@@ -100,16 +124,20 @@ export default function HomePage() {
 
         {/* Hero Section */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-  <div className="mb-4">
-    <Badge 
-      variant="secondary" 
-      className="mb-4 animate-pulse transition-all duration-1000 hover:scale-105"
-      style={{ color: "#494848" }}
-    >
-      GKF Medical Training Platform
-    </Badge>
-  </div>
+          <div className="mb-4">
+            <Badge 
+              variant="secondary" 
+              className="mb-4 badge-animation"
+              style={{ 
+                color: "#494848", 
+                fontSize: "1.25rem",
+                padding: "0.75rem 1.5rem",
+                fontWeight: "600"
+              }}
+            >
+              GKF Medical Training Platform
+            </Badge>
+          </div>
           <h1 className="text-5xl font-bold mb-6" style={{ color: "#81F529" }}>
             Empowering Healthcare Through <span style={{ color: "#F59D29" }}>Smarter Training</span>
           </h1>
