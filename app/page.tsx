@@ -138,8 +138,8 @@ export default function HomePage() {
               GKF Medical Training Platform
             </Badge>
           </div>
-          <h1 className="text-5xl font-bold mb-6" style={{ color: "#81F529" }}>
-            Empowering Healthcare Through <span style={{ color: "#F59D29" }}>Smarter Training</span>
+          <h1 className="text-5xl font-bold mb-6" style={{ color: "#03D5FF" }}>
+            Empowering Healthcare Through <span style={{ color: "#FF4F03" }}>Smarter Training</span>
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
             Experience comprehensive medical training through interactive modules, assessments, and real-world scenarios
