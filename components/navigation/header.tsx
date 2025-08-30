@@ -62,7 +62,7 @@ export function Header({ title, subtitle, moduleType }: HeaderProps) {
             <Link href="/" className="flex items-center space-x-3">
    {isHomePage ? (
   <div>
-    <h1 className="text-xl font-bold text-[#FF5C00] hover:text-white transition-colors">
+    <h1 className="text-xxxl font-bold text-[#FF5C00] hover:text-white transition-colors">
       Medical Training Platform
     </h1>
     <p className="text-sm hidden sm:block text-[#FF5C00] hover:text-white transition-colors">
