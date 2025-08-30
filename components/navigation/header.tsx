@@ -85,17 +85,6 @@ export function Header({ title, subtitle, moduleType }: HeaderProps) {
               )}
             </Link>
 
-            {/* Breadcrumb for non-home pages */}
-            {!isHomePage && (
-              <div className="hidden md:flex items-center space-x-2 text-sm" style={{ color: "#FF5C00" }}>
-                <span>/</span>
-                <span>
-                  {title || "Training Module"}
-                </span>
-              </div>
-            )}
-          </div>
-
           {/* Center - Navigation Links (Desktop) */}
           <nav className="hidden lg:flex items-center space-x-8">
             <Link
