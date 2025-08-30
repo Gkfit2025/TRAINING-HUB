@@ -429,19 +429,24 @@ export default function HomePage() {
           </div>
         </section>
 
-        <footer className="bg-gray-50 border-t">
+        {/* Enhanced Footer */}
+        <footer className="border-t" style={{ backgroundColor: "#0B3559" }}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <div className="text-center">
               <div className="flex items-center justify-center mb-4">
-                <img src="logo12.png" alt="Grace Kennett Foundation Logo" className="h-8 w-8 mr-3" />
-                <span className="text-xl font-bold text-gray-900">Grace Kennett Foundation</span>
+                <img src="logo12.png" alt="Grace Kennett Foundation Logo" className="h-10 w-10 mr-3" />
+                <span className="text-xl font-bold" style={{ color: "#FF5C00" }}>
+                  Grace Kennett Foundation
+                </span>
               </div>
-              <p className="text-gray-600 mb-4">For suggestions WhatsApp GKF-IT Team at +91 9842194442</p>
-              <div className="flex items-center justify-center space-x-2 text-sm text-gray-500">
-                <img src="logo12.png" alt="Grace Kennett Foundation Logo" className="h-4 w-4" style={{ color: '#80ff80' }} />
+              <p className="mb-4" style={{ color: "#81F529" }}>
+                For suggestions WhatsApp GKF-IT Team at +91 9842194442
+              </p>
+              <div className="flex items-center justify-center space-x-2 text-sm mb-2" style={{ color: "#F59D29" }}>
+                <img src="logo12.png" alt="Grace Kennett Foundation Logo" className="h-4 w-4" />
                 <span>License 4.0 • Grace Kennett Foundation Hospital, 8, Kennett Road Madurai, Tamil Nadu, India</span>
               </div>
-              <p className="text-sm text-gray-500 mt-2">
+              <p className="text-sm" style={{ color: "#81F529" }}>
                 © 2025 Grace Kennett Foundation. All rights reserved.
               </p>
             </div>
