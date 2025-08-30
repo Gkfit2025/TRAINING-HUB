@@ -72,7 +72,7 @@ export function Header({ title, subtitle, moduleType }: HeaderProps) {
 ) : (
   <div className="hidden sm:block">
     <h1 className="text-lg font-semibold text-[#FF5C00] hover:text-white transition-colors">
-      Medical Training Platform
+      Grace Kennett Foundation
     </h1>
   </div>
 )}
