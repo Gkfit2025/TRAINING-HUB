@@ -429,32 +429,47 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Enhanced Footer with bigger size and #F2620A color */}
-        <footer className="border-t py-16" style={{ backgroundColor: "#ABFA8F" }}>
+      {/* Reduced Footer with #2D4EF0 font color */}
+<footer className="border-t py-8" style={{ backgroundColor: "#ABFA8F" }}>
   <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
     <div className="text-center">
-      <div className="flex items-center justify-center mb-6">
-        <img src="logo12.png" alt="Grace Kennett Foundation Logo" className="h-12 w-12 mr-3" />
-        <span className="text-2xl font-bold" style={{ color: "#001866" }}>
+      {/* Logo + Title */}
+      <div className="flex items-center justify-center mb-4">
+        <img
+          src="logo12.png"
+          alt="Grace Kennett Foundation Logo"
+          className="h-10 w-10 mr-2"
+        />
+        <span className="text-xl font-bold" style={{ color: "#2D4EF0" }}>
           Grace Kennett Foundation
         </span>
       </div>
-      <p className="mb-6 text-lg" style={{ color: "#001866" }}>
+
+      {/* WhatsApp Contact */}
+      <p className="mb-4 text-base" style={{ color: "#2D4EF0" }}>
         For suggestions WhatsApp GKF-IT Team at +91 9842194442
       </p>
-      <div className="flex items-center justify-center space-x-2 text-base mb-4" style={{ color: "#001866" }}>
-        <img src="logo12.png" alt="Grace Kennett Foundation Logo" className="h-5 w-5" />
+
+      {/* License Info */}
+      <div
+        className="flex items-center justify-center space-x-2 text-sm mb-3"
+        style={{ color: "#2D4EF0" }}
+      >
+        <img
+          src="logo12.png"
+          alt="Grace Kennett Foundation Logo"
+          className="h-4 w-4"
+        />
         <span>
-          License 4.0 • Grace Kennett Foundation Hospital, 8, Kennett Road Madurai, Tamil Nadu, India
+          License 4.0 • Grace Kennett Foundation Hospital, 8, Kennett Road,
+          Madurai, Tamil Nadu, India
         </span>
       </div>
-      <p className="text-sm opacity-90" style={{ color: "#001866" }}>
+
+      {/* Copyright */}
+      <p className="text-xs opacity-90" style={{ color: "#2D4EF0" }}>
         © 2025 Grace Kennett Foundation. All rights reserved.
       </p>
     </div>
   </div>
 </footer>
-      </div>
-    </div>
-  )
-}
